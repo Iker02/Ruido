@@ -2,115 +2,101 @@
   class="relative flex size-full min-h-screen flex-col bg-[#111418] dark group/design-root overflow-x-hidden"
   style="font-family: Epilogue, 'Noto Sans', sans-serif"
 >
-  <div class="layout-container flex h-full grow flex-col">
+  <div class="layout-container flex min-h-screen grow flex-col">
     <div class="flex flex-1 justify-center">
-      <div class="layout-content-container flex flex-col w-full flex-1 md:pr-4">
-        >
+      <div class="layout-content-container flex flex-col w-full flex-1">
         <div class="@container">
-          <div class="@[480px]:p-4">
+          <div class="@[480px]">
             <div
-              class="flex min-h-[780px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-start justify-end px-4 pb-10 @[480px]:px-10"
+              class="flex min-h-[95vh] sm:min-h-[95vh] md:min-h-[95vh] lg:min-h-[95vh] flex-col gap-6 bg-cover bg-center bg-no-repeat items-start justify-end px-4 pb-10 sm:gap-8 sm:px-10"
               style="
                 background-image: linear-gradient(
                     rgba(0, 0, 0, 0.1) 0%,
                     rgba(0, 0, 0, 0.4) 100%
                   ),
-                  url('https://cdn.usegalileo.ai/sdxl10/8a11751a-b829-4770-850c-d9730e58870d.png');
+                  url('assets/article-cinematografia.jpg');
               "
             >
               <h1
-                class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] text-center"
+                class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] text-center pb-20"
               >
-                We turn noise into stories
+                Transforming noise into narrative
               </h1>
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#1466b8] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
-              >
-                <span class="truncate">See our work</span>
-              </button>
             </div>
           </div>
         </div>
         <main>
           <section>
-            <div>
-              <h1>
-                <span>
-                  <div class="overflow-x-auto p-4">
-                    <div
-                      class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 whitespace-nowrap"
-                    >
-                      <div class="flex flex-col gap-3">
-                        <div
-                          class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-                          style="
-                            background-image: url('https://cdn.usegalileo.ai/sdxl10/858a3536-68e3-40d7-8685-ca63b8129c7e.png');
-                          "
-                        ></div>
-                      </div>
-                      <div class="flex flex-col gap-3">
-                        <div
-                          class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-                          style="
-                            background-image: url('https://cdn.usegalileo.ai/sdxl10/851cf055-8af1-4059-9c8d-9bc68187e96d.png');
-                          "
-                        ></div>
-                      </div>
-                      <div class="flex flex-col gap-3">
-                        <div
-                          class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-                          style="
-                            background-image: url('https://cdn.usegalileo.ai/sdxl10/01f71aa7-b522-4fd6-8747-9498bea4d996.png');
-                          "
-                        ></div>
-                      </div>
-                      <div class="flex flex-col gap-3">
-                        <div
-                          class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-                          style="
-                            background-image: url('https://cdn.usegalileo.ai/sdxl10/7ad990b9-f94f-47bf-931b-102d350d4da3.png');
-                          "
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </span>
-              </h1>
-            </div>
+            <om-marquee styleClass="marquee-custom-style text-white mt-7">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                style="
+                  background-image: url('https://cdn.usegalileo.ai/sdxl10/858a3536-68e3-40d7-8685-ca63b8129c7e.png');
+                "
+                #OmMarqueeContent
+              >
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </div>
+
+              <div
+                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                style="
+                  background-image: url('https://cdn.usegalileo.ai/sdxl10/851cf055-8af1-4059-9c8d-9bc68187e96d.png');
+                "
+                #OmMarqueeContent
+              >
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </div>
+              <div
+                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                style="
+                  background-image: url('https://cdn.usegalileo.ai/sdxl10/01f71aa7-b522-4fd6-8747-9498bea4d996.png');
+                "
+                #OmMarqueeContent
+              >
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </div>
+              <div
+                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                style="
+                  background-image: url('https://cdn.usegalileo.ai/sdxl10/7ad990b9-f94f-47bf-931b-102d350d4da3.png');
+                "
+                #OmMarqueeContent
+              >
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </div>
+            </om-marquee>
           </section>
 
-          <section>
-            <h3>
+          <section class="projects-stack w-full flex justify-center mt-16 px-4">
+            <div
+              class="w-full max-w-screen-md md:w-3/5 bg-[#1a1e23] rounded-2xl shadow-lg p-6 border border-white/10"
+            >
               <h2
-                class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+                class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-6 px-2"
               >
                 Recent projects
               </h2>
-              <div class="p-4">
+              <div class="flex flex-col gap-6">
+                <!-- Card 1 -->
                 <div
-                  class="flex items-stretch justify-between gap-4 rounded-lg"
+                  class="flex items-stretch justify-between gap-4 rounded-lg px-2"
                 >
                   <div class="flex flex-[2_2_0px] flex-col gap-4">
                     <div class="flex flex-col gap-1">
-                      <p
-                        class="text-[#9dabb8] text-sm font-normal leading-normal"
-                      >
-                        Short film
-                      </p>
-                      <p class="text-white text-base font-bold leading-tight">
+                      <p class="text-[#9dabb8] text-sm">Short film</p>
+                      <p class="text-white text-base font-bold">
                         The Echo Chamber
                       </p>
-                      <p
-                        class="text-[#9dabb8] text-sm font-normal leading-normal"
-                      >
+                      <p class="text-[#9dabb8] text-sm">
                         A young woman is haunted by a mysterious voice that only
                         she can hear.
                       </p>
                     </div>
                     <button
-                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#293038] text-white text-sm font-medium leading-normal w-fit"
+                      class="bg-[#293038] text-white text-sm px-4 h-8 rounded-lg w-fit"
                     >
-                      <span class="truncate">Watch now</span>
+                      Watch now
                     </button>
                   </div>
                   <div
@@ -120,68 +106,66 @@
                     "
                   ></div>
                 </div>
+
+                <!-- Card 2 -->
+                <div
+                  class="flex items-stretch justify-between gap-4 rounded-lg px-2"
+                >
+                  <div class="flex flex-[2_2_0px] flex-col gap-4">
+                    <div class="flex flex-col gap-1">
+                      <p class="text-[#9dabb8] text-sm">Animation</p>
+                      <p class="text-white text-base font-bold">
+                        Silent Signals
+                      </p>
+                      <p class="text-[#9dabb8] text-sm">
+                        A story told entirely through light and motion in a
+                        dystopian world.
+                      </p>
+                    </div>
+                    <button
+                      class="bg-[#293038] text-white text-sm px-4 h-8 rounded-lg w-fit"
+                    >
+                      Watch now
+                    </button>
+                  </div>
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                    style="
+                      background-image: url('https://cdn.usegalileo.ai/sdxl10/851cf055-8af1-4059-9c8d-9bc68187e96d.png');
+                    "
+                  ></div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                  class="flex items-stretch justify-between gap-4 rounded-lg px-2"
+                >
+                  <div class="flex flex-[2_2_0px] flex-col gap-4">
+                    <div class="flex flex-col gap-1">
+                      <p class="text-[#9dabb8] text-sm">Experimental</p>
+                      <p class="text-white text-base font-bold">Code/Canvas</p>
+                      <p class="text-[#9dabb8] text-sm">
+                        A generative art film made with real-time code and
+                        emotion.
+                      </p>
+                    </div>
+                    <button
+                      class="bg-[#293038] text-white text-sm px-4 h-8 rounded-lg w-fit"
+                    >
+                      Watch now
+                    </button>
+                  </div>
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                    style="
+                      background-image: url('https://cdn.usegalileo.ai/sdxl10/01f71aa7-b522-4fd6-8747-9498bea4d996.png');
+                    "
+                  ></div>
+                </div>
               </div>
-            </h3>
+            </div>
           </section>
         </main>
-        <div class="p-4">
-          <div class="flex items-stretch justify-between gap-4 rounded-lg">
-            <div class="flex flex-[2_2_0px] flex-col gap-4">
-              <div class="flex flex-col gap-1">
-                <p class="text-[#9dabb8] text-sm font-normal leading-normal">
-                  Music video
-                </p>
-                <p class="text-white text-base font-bold leading-tight">
-                  Hollow
-                </p>
-                <p class="text-[#9dabb8] text-sm font-normal leading-normal">
-                  A surreal journey through an abandoned city, set to an eerie
-                  electronic track.
-                </p>
-              </div>
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#293038] text-white text-sm font-medium leading-normal w-fit"
-              >
-                <span class="truncate">Watch now</span>
-              </button>
-            </div>
-            <div
-              class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
-              style="
-                background-image: url('https://cdn.usegalileo.ai/sdxl10/33a716f3-d71b-488b-848c-c93342ac3c39.png');
-              "
-            ></div>
-          </div>
-        </div>
-        <div class="p-4">
-          <div class="flex items-stretch justify-between gap-4 rounded-lg">
-            <div class="flex flex-[2_2_0px] flex-col gap-4">
-              <div class="flex flex-col gap-1">
-                <p class="text-[#9dabb8] text-sm font-normal leading-normal">
-                  Commercial
-                </p>
-                <p class="text-white text-base font-bold leading-tight">
-                  Lumina
-                </p>
-                <p class="text-[#9dabb8] text-sm font-normal leading-normal">
-                  An ad for a hi-tech startup, featuring sleek product shots and
-                  futuristic cityscapes.
-                </p>
-              </div>
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#293038] text-white text-sm font-medium leading-normal w-fit"
-              >
-                <span class="truncate">Watch now</span>
-              </button>
-            </div>
-            <div
-              class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
-              style="
-                background-image: url('https://cdn.usegalileo.ai/sdxl10/fbbadafe-9e71-4ea5-9344-fca688192910.png');
-              "
-            ></div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
