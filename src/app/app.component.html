@@ -1,52 +1,66 @@
-
-  <div
-    class="relative flex size-full min-h-screen flex-col bg-[#111418] dark group/design-root overflow-x-hidden"
-    style="font-family: Epilogue, 'Noto Sans', sans-serif"
-  >
-    <div class="layout-container flex h-full grow flex-col">
-      <header
-        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#293038] px-10 py-3"
-      >
-        <div class="flex items-center gap-4 text-white">
-          <div class="size-4">
-            <svg
-              viewBox="0 0 48 48"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </div>
-          <h2
-            class="text-white text-lg font-bold leading-tight tracking-[-0.015em]"
+<div
+  class="relative flex size-full min-h-screen flex-col bg-[#111418] dark group/design-root overflow-x-hidden"
+  style="font-family: Epilogue, 'Noto Sans', sans-serif"
+>
+  <div class="layout-container flex h-full grow flex-col">
+    <header
+      class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#293038] px-10 py-3"
+    >
+      <div class="flex items-center gap-4 text-white">
+        <div class="size-4">
+          <svg
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            Ruido
-          </h2>
+            <path
+              d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"
+              fill="currentColor"
+            ></path>
+          </svg>
         </div>
-        <div class="flex flex-1 justify-end gap-8">
-          <div class="flex items-center gap-9">
-            <a class="text-white text-sm font-medium leading-normal" href="#"
-              >Projects</a
-            >
-            <a class="text-white text-sm font-medium leading-normal" href="#"
-              >About</a
-            >
-            <a class="text-white text-sm font-medium leading-normal" href="#"
-              >Contact</a
-            >
-          </div>
-          <div
-            class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-            style="
-              background-image: url('https://cdn.usegalileo.ai/sdxl10/405b4342-9a7d-4ada-977a-56630d58191d.png');
-            "
-          ></div>
+        <h2
+          class="text-white text-lg font-bold leading-tight tracking-[-0.015em]"
+        >
+          Ruido
+        </h2>
+      </div>
+      <div class="flex flex-1 justify-end gap-8">
+        <div class="flex items-center gap-9">
+          <a class="text-white text-sm font-medium leading-normal" href="#"
+            >Projects</a
+          >
+          <a class="text-white text-sm font-medium leading-normal" href="#"
+            >About</a
+          >
+          <a class="text-white text-sm font-medium leading-normal" href="#"
+            >Contact</a
+          >
         </div>
-      </header>
-      <router-outlet></router-outlet>
-    </div>
+        <div
+          class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+          style="
+            background-image: url('https://cdn.usegalileo.ai/sdxl10/405b4342-9a7d-4ada-977a-56630d58191d.png');
+          "
+        ></div>
+      </div>
+    </header>
+    <ngx-spinner
+    bdColor="#000000"
+    size="small"
+    color="#fff"
+    type="ball-scale-multiple"
+    [fullScreen]="true"
+  >
+    <img
+      src="../assets/25279-7-camera-lens-transparent.png"
+      alt="logo"
+      class="rotate-animation"
+      style="width: 250px; height: auto;"
+    />
+  </ngx-spinner>
+  
+  <router-outlet></router-outlet>
+  
   </div>
-
+</div>

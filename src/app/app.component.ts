@@ -1,4 +1,5 @@
 import { Component, Inject } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { ButtonModule } from 'primeng/button';
 
 
@@ -10,5 +11,15 @@ import { ButtonModule } from 'primeng/button';
 })
 export class AppComponent {
   title = 'ruido';
+  constructor(private spinner: NgxSpinnerService) {}
+
+  ngOnInit(): void {
+    this.spinner.show();
+
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 2000); 
+  }
+
 
 }

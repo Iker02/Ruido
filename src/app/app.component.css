@@ -19,6 +19,20 @@
   background-color: transparent;
 }
 
+@keyframes spinOnce {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: spinOnce 2s linear;
+}
+
+
 .navbar-dropdown:not(.transparent) {
   background-color: var(--menuBgColor) !important;
 }
