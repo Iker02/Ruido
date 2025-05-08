@@ -18,11 +18,10 @@ export class AppComponent implements AfterViewInit {
 
   ngOnInit(): void {
     // Mostrar el spinner tan pronto como la aplicación se inicia
-
+    this.spinner.show();
   }
 
   ngAfterViewInit(): void {
-    this.spinner.show();
     // Hacer que el spinner se oculte después de un pequeño retraso (ajustar según sea necesario)
     setTimeout(() => {
       this.spinner.hide();
