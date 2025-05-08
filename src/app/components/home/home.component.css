@@ -13,3 +13,14 @@
   .clip-abstract {
     clip-path: polygon(0 0, 85% 5%, 100% 30%, 90% 60%, 100% 100%, 15% 95%, 0% 60%, 10% 30%);
   }
+
+  .marquee-container {
+    width: 100%; /* O un ancho fijo */
+    overflow: hidden; /* Escondemos el contenido fuera del contenedor */
+  }
+  
+  .marquee-content {
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    display: inline-block; /* Asegura que el contenido no ocupe todo el ancho */
+  }
+  
