@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { ButtonModule } from 'primeng/button';
 
 
 @Component({
@@ -9,4 +10,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ruido';
+
 }
