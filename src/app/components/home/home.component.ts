@@ -9,6 +9,7 @@ import emailjs from 'emailjs-com';
   styleUrls: ['./home.component.css'] 
 })
 export class HomeComponent  {
+  isMouseDown = false;
   contactoForm!: FormGroup;
 
   constructor(private fb: FormBuilder) {}
@@ -20,6 +21,14 @@ export class HomeComponent  {
       message: ['', [Validators.required]]
     });
   }
+
+
+  cards = [
+    { title: 'Silent Signals', description: 'A story told entirely...', image: '../../../assets/article-cinematografia.jpg' },
+    { title: 'Silent Signals', description: 'A story told entirely...', image: '../../../assets/article-cinematografia.jpg' },
+    { title: 'Silent Signals', description: 'A story told entirely...', image: '../../../assets/article-cinematografia.jpg' },
+    { title: 'Silent Signals', description: 'A story told entirely...', image: '../../../assets/article-cinematografia.jpg' },
+  ];
 
   // Función para enviar el formulario
   sendEmail(): void {
