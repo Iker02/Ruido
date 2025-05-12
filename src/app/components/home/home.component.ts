@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import emailjs from 'emailjs-com';
 
@@ -6,9 +6,9 @@ import emailjs from 'emailjs-com';
   selector: 'app-home',
   standalone: false,
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'] 
+  styleUrls: ['./home.component.css'],
 })
-export class HomeComponent  {
+export class HomeComponent {
   isMouseDown = false;
   contactoForm!: FormGroup;
 
@@ -18,16 +18,35 @@ export class HomeComponent  {
     this.contactoForm = this.fb.group({
       user_name: ['', [Validators.required]],
       user_email: ['', [Validators.required, Validators.email]],
-      message: ['', [Validators.required]]
+      message: ['', [Validators.required]],
     });
   }
 
-
   cards = [
-    { title: 'Silent Signals', description: 'A story told entirely...', image: '../../../assets/article-cinematografia.jpg' },
-    { title: 'Silent Signals', description: 'A story told entirely...', image: '../../../assets/article-cinematografia.jpg' },
-    { title: 'Silent Signals', description: 'A story told entirely...', image: '../../../assets/article-cinematografia.jpg' },
-    { title: 'Silent Signals', description: 'A story told entirely...', image: '../../../assets/article-cinematografia.jpg' },
+    {
+      title: 'Silent Signals',
+      description:
+        'A story told entirely through light and motion in a dystopian world. This animated short removing all dialogue, focusing instead on emotion and movement.',
+      image: '../../../assets/article-cinematografia.jpg',
+    },
+    {
+      title: 'Silent Signals',
+      description:
+        'A story told entirely through light and motion in a dystopian world. This animated short removing all dialogue, focusing instead on emotion and movement.',
+      image: '../../../assets/article-cinematografia.jpg',
+    },
+    {
+      title: 'Silent Signals',
+      description:
+        'A story told entirely through light and motion in a dystopian world. This animated short removing all dialogue, focusing instead on emotion and movement.',
+      image: '../../../assets/article-cinematografia.jpg',
+    },
+    {
+      title: 'Silent Signals',
+      description:
+        'A story told entirely through light and motion in a dystopian world. This animated short removing all dialogue, focusing instead on emotion and movement.',
+      image: '../../../assets/article-cinematografia.jpg',
+    },
   ];
 
   // Función para enviar el formulario
