@@ -1,0 +1,7 @@
+navbar transparente ->
+//merch
+contenido - LOGO (en medio) - quieres somos (redirección) contacto
+popup whatsapp abajo a la derecha 
+cada carta tiene un hover con texto por detrás 
+dar mucho protagonismo al contenido en sí
+sin espacios en medio
