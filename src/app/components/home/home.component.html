@@ -1,308 +1,228 @@
 <div
-  class="relative flex size-full min-h-screen flex-col bg-[#111418] dark group/design-root overflow-x-hidden"
-  style="font-family: Epilogue, 'Noto Sans', sans-serif"
+  class="body relative w-[100vw] h-[80vh] overflow-hidden aspect-video cursor-default"
 >
-  <div class="layout-container flex min-h-screen grow flex-col">
-    <div class="flex flex-1 justify-center">
-      <div class="layout-content-container flex flex-col w-full flex-1">
-        <div class="@container">
-          <div class="@[480px]">
-            <div class="@[480px]">
-                <div class="relative w-full h-[80vh] overflow-hidden">
-                    <video
-                      class="absolute top-0 left-1/2 -translate-x-1/2 h-full object-cover"
-                      autoplay
-                      muted
-                      loop
-                      playsinline
-                      style="width: auto; min-width: 100%;"
-                    >
-                      <source src="../../../assets/22566-328624783.mp4" type="video/mp4" />
-                      Tu navegador no soporta el tag de video.
-                    </video>
-              
-              
-                <h1
-                  class="font-audiowide text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] text-center pb-20"
-                >
-                  Transforming noise into narrative
-                </h1>
-              </div>
+  <om-marquee
+    [direction]="'right'"
+    [speed]="50"
+    [pauseOnHover]="false"
+    styleClass="absolute top-0 left-0 w-full text-black text-lg font-semibold py-2 mt-12 bg-transparent z-10"
+  >
+    <div #OmMarqueeContent>
+      Bienvenido a Ruido — Descubre, aprende y desarrolla tus habilidades en
+      programación sin límites.
+    </div>
+  </om-marquee>
+
+  <video
+    src="assets/22566-328624783.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+    class="w-full h-[80vh] object-none z-0"
+  ></video>
+</div>
+
+<div class="contenidoDeCartas flex overflow-x-auto no-scrollbar whitespace-nowrap snap-x snap-mandatory">
+
+    <div class="card flex-shrink-0 snap-start" style="width: 63.33%;">
+      <img
+        src="../../../assets/article-cinematografia.jpg"
+        class="w-full object-cover h-[400px]"
+      />
+      <div class="card__content">
+        <p class="card__title">Silent Signals</p>
+        <p class="card__description">
+          A story told entirely through light and motion in a dystopian world.
+          This animated short challenges traditional storytelling by removing all
+          dialogue, focusing instead on emotion and movement.
+        </p>
+      </div>
+    </div>
+  
+    <div class="card flex-shrink-0 snap-start" style="width: 63.33%;">
+      <img
+        src="../../../assets/article-cinematografia.jpg"
+        class="w-full object-cover h-[400px]"
+      />
+      <div class="card__content">
+        <p class="card__title">Silent Signals</p>
+        <p class="card__description">
+          A story told entirely through light and motion in a dystopian world.
+          This animated short challenges traditional storytelling by removing all
+          dialogue, focusing instead on emotion and movement.
+        </p>
+      </div>
+    </div>
+  
+    <div class="card flex-shrink-0 snap-start" style="width: 63.33%;">
+      <img
+        src="../../../assets/article-cinematografia.jpg"
+        class="w-full object-cover h-[400px]"
+      />
+      <div class="card__content">
+        <p class="card__title">Silent Signals</p>
+        <p class="card__description">
+          A story told entirely through light and motion in a dystopian world.
+          This animated short challenges traditional storytelling by removing all
+          dialogue, focusing instead on emotion and movement.
+        </p>
+      </div>
+    </div>
+  
+    <div class="card flex-shrink-0 snap-start" style="width: 63.33%;">
+      <img
+        src="../../../assets/article-cinematografia.jpg"
+        class="w-full object-cover h-[400px]"
+      />
+      <div class="card__content">
+        <p class="card__title">Silent Signals</p>
+        <p class="card__description">
+          A story told entirely through light and motion in a dystopian world.
+          This animated short challenges traditional storytelling by removing all
+          dialogue, focusing instead on emotion and movement.
+        </p>
+      </div>
+    </div>
+  
+  </div>
+  
+
+<main>
+  <section>
+    <om-marquee styleClass="marquee-custom-style text-white">
+      <div
+        class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+        #OmMarqueeContent
+      >
+        <img
+          src="../../../assets/camara-antigua.jpg"
+          alt=""
+          class="w-[260px] h-auto object-cover rounded-lg"
+        />
+      </div>
+
+      <div
+        class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+        #OmMarqueeContent
+      >
+        <img
+          src="../../../assets/camara-antigua.jpg"
+          alt=""
+          class="w-[260px] h-auto object-cover rounded-lg"
+        />
+      </div>
+      <div
+        class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+        #OmMarqueeContent
+      >
+        <img
+          src="../../../assets/camara-antigua.jpg"
+          alt=""
+          class="w-[260px] h-auto object-cover rounded-lg"
+        />
+      </div>
+      <div
+        class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+        #OmMarqueeContent
+      >
+        <img
+          src="../../../assets/camara-antigua.jpg"
+          alt=""
+          class="w-[260px] h-auto object-cover rounded-lg"
+        />
+      </div>
+    </om-marquee>
+  </section>
+
+  <section class="projects-stack w-full flex justify-center">
+    <div class="w-full max-w-screen bg-[#1a1e23] p-6 border border-white/10">
+      <h2
+        class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-6 px-2"
+      >
+        Recent projects
+      </h2>
+      <div class="flex flex-col gap-6">
+        <!-- Card 1: Imagen izquierda -->
+        <div
+          class="flex items-stretch justify-between gap-4 rounded-lg px-2 flex-wrap md:flex-nowrap"
+        >
+          <div
+            class="w-full md:w-1/2 bg-center bg-no-repeat aspect-video bg-cover rounded-lg clip-hexagon"
+            style="
+              background-image: url('https://cdn.usegalileo.ai/sdxl10/4b61f325-7231-4b42-b984-1449588f853d.png');
+            "
+          ></div>
+
+          <div
+            class="w-full md:w-1/2 flex flex-col justify-center items-center gap-4 text-center p-4"
+          >
+            <div class="flex flex-col gap-2">
+              <p class="text-[#9dabb8] text-sm">Short film</p>
+              <p class="text-white text-xl font-bold">The Echo Chamber</p>
+              <p class="text-[#9dabb8] text-sm leading-relaxed">
+                A young woman is haunted by a mysterious voice that only she can
+                hear. <br />
+                This experimental short explores psychological isolation and the
+                search for identity through surreal visuals.
+              </p>
             </div>
-          </div>
-          <div class="flex overflow-x-auto whitespace-nowrap">
-            <img src="../../../assets/article-cinematografia.jpg" class="w-1/2 sm:w-1/2 md:w-1/3 xl:w-1/4 flex-shrink-0" />
-            <img src="../../../assets/article-cinematografia.jpg" class="w-1/2 sm:w-1/2 md:w-1/3 xl:w-1/4 flex-shrink-0" />
-            <img src="../../../assets/article-cinematografia.jpg" class="w-1/2 sm:w-1/2 md:w-1/3 xl:w-1/4 flex-shrink-0" />
-            <img src="../../../assets/article-cinematografia.jpg" class="w-1/2 sm:w-1/2 md:w-1/3 xl:w-1/4 flex-shrink-0" />
-            <img src="../../../assets/article-cinematografia.jpg" class="w-1/2 sm:w-1/2 md:w-1/3 xl:w-1/4 flex-shrink-0" />
-          </div>
-          
-                   
-          <main>
-            <section>
-              <om-marquee styleClass="marquee-custom-style text-white mt-7">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-                  style="
-                    background-image: url('https://cdn.usegalileo.ai/sdxl10/858a3536-68e3-40d7-8685-ca63b8129c7e.png');
-                  "
-                  #OmMarqueeContent
-                >
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </div>
-
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-                  style="
-                    background-image: url('https://cdn.usegalileo.ai/sdxl10/851cf055-8af1-4059-9c8d-9bc68187e96d.png');
-                  "
-                  #OmMarqueeContent
-                >
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </div>
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-                  style="
-                    background-image: url('https://cdn.usegalileo.ai/sdxl10/01f71aa7-b522-4fd6-8747-9498bea4d996.png');
-                  "
-                  #OmMarqueeContent
-                >
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </div>
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-                  style="
-                    background-image: url('https://cdn.usegalileo.ai/sdxl10/7ad990b9-f94f-47bf-931b-102d350d4da3.png');
-                  "
-                  #OmMarqueeContent
-                >
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </div>
-              </om-marquee>
-              <om-marquee
-                [direction]="'right'"
-                [speed]="50"
-                styleClass="text-white text-lg font-semibold py-2"
-              >
-                <div #OmMarqueeContent>
-                    Bienvenido a Ruido — Descubre, aprende y desarrolla tus habilidades en programación sin límites.
-                </div>
-              </om-marquee>
-            </section>
-
-            <section class="projects-stack w-full flex justify-center mt-16">
-              <div
-                class="w-full max-w-screen bg-[#1a1e23] p-6 border border-white/10"
-              >
-                <h2
-                  class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-6 px-2"
-                >
-                  Recent projects
-                </h2>
-                <div class="flex flex-col gap-6">
-                  <!-- Card 1: Imagen izquierda -->
-                  <div
-                    class="flex items-stretch justify-between gap-4 rounded-lg px-2 flex-wrap md:flex-nowrap"
-                  >
-                    <div
-                      class="w-full md:w-1/2 bg-center bg-no-repeat aspect-video bg-cover rounded-lg clip-hexagon"
-                      style="
-                        background-image: url('https://cdn.usegalileo.ai/sdxl10/4b61f325-7231-4b42-b984-1449588f853d.png');
-                      "
-                    ></div>
-
-                    <div
-                      class="w-full md:w-1/2 flex flex-col justify-center items-center gap-4 text-center p-4"
-                    >
-                      <div class="flex flex-col gap-2">
-                        <p class="text-[#9dabb8] text-sm">Short film</p>
-                        <p class="text-white text-xl font-bold">
-                          The Echo Chamber
-                        </p>
-                        <p class="text-[#9dabb8] text-sm leading-relaxed">
-                          A young woman is haunted by a mysterious voice that
-                          only she can hear. <br />
-                          This experimental short explores psychological
-                          isolation and the search for identity through surreal
-                          visuals.
-                        </p>
-                      </div>
-                      <button
-                        class="bg-[#293038] text-white text-sm px-6 py-2 rounded-lg mt-2"
-                      >
-                        Watch now
-                      </button>
-                    </div>
-                  </div>
-
-                  <!-- Card 2: Imagen derecha -->
-                  <div
-                    class="flex items-stretch justify-between gap-4 rounded-lg px-2 flex-wrap md:flex-nowrap"
-                  >
-                    <div
-                      class="w-full md:w-1/2 flex flex-col justify-center items-center gap-4 text-center p-4"
-                    >
-                      <div class="flex flex-col gap-2">
-                        <p class="text-[#9dabb8] text-sm">Animation</p>
-                        <p class="text-white text-xl font-bold">
-                          Silent Signals
-                        </p>
-                        <p class="text-[#9dabb8] text-sm leading-relaxed">
-                          A story told entirely through light and motion in a
-                          dystopian world. <br />
-                          This animated short challenges traditional
-                          storytelling by removing all dialogue, focusing
-                          instead on emotion and movement.
-                        </p>
-                      </div>
-                      <button
-                        class="bg-[#293038] text-white text-sm px-6 py-2 rounded-lg mt-2"
-                      >
-                        Watch now
-                      </button>
-                    </div>
-                    <div
-                      class="w-full md:w-1/2 bg-center bg-no-repeat aspect-video bg-cover rounded-lg clip-abstract"
-                      style="
-                        background-image: url('https://cdn.usegalileo.ai/sdxl10/851cf055-8af1-4059-9c8d-9bc68187e96d.png');
-                      "
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section
-              class="w-full bg-[#12161a] py-16 px-4 flex justify-center items-center"
+            <button
+              class="bg-[#293038] text-white text-sm px-6 py-2 rounded-lg mt-2"
             >
-              <div class="max-w-4xl text-center">
-                <h2 class="text-white text-3xl font-bold mb-4">
-                  Quiénes somos
-                </h2>
-                <p class="text-[#9dabb8] text-lg leading-relaxed">
-                  En <span class="text-white font-semibold">Ruido</span> somos
-                  un equipo apasionado por la tecnología, la educación y la
-                  creatividad. Nuestro objetivo es ofrecer experiencias únicas
-                  de aprendizaje para que cualquier persona pueda explorar,
-                  aprender y programar sin límites.
-                </p>
-                <p class="text-[#9dabb8] text-lg leading-relaxed mt-4">
-                  Combinamos diseño, narrativa y código para construir una
-                  plataforma donde el conocimiento es accesible, divertido y
-                  envolvente.
-                </p>
-              </div>
-            </section>
-          </main>
+              Watch now
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: Imagen derecha -->
+        <div
+          class="flex items-stretch justify-between gap-4 rounded-lg px-2 flex-wrap md:flex-nowrap"
+        >
+          <div
+            class="w-full md:w-1/2 flex flex-col justify-center items-center gap-4 text-center p-4"
+          >
+            <div class="flex flex-col gap-2">
+              <p class="text-[#9dabb8] text-sm">Animation</p>
+              <p class="text-white text-xl font-bold">Silent Signals</p>
+              <p class="text-[#9dabb8] text-sm leading-relaxed">
+                A story told entirely through light and motion in a dystopian
+                world. <br />
+                This animated short challenges traditional storytelling by
+                removing all dialogue, focusing instead on emotion and movement.
+              </p>
+            </div>
+            <button
+              class="bg-[#293038] text-white text-sm px-6 py-2 rounded-lg mt-2"
+            >
+              Watch now
+            </button>
+          </div>
+          <div
+            class="w-full md:w-1/2 bg-center bg-no-repeat aspect-video bg-cover rounded-lg clip-abstract"
+            style="
+              background-image: url('https://cdn.usegalileo.ai/sdxl10/851cf055-8af1-4059-9c8d-9bc68187e96d.png');
+            "
+          ></div>
         </div>
       </div>
     </div>
-    <section class="bg-white text-black py-12 px-6 md:px-20" id="contacto">
-        <h2 class="text-2xl md:text-3xl font-bold mb-6">
-          ¿Quieres más información o tienes alguna duda?
-        </h2>
-        <form [formGroup]="contactoForm" (ngSubmit)="sendEmail()" class="space-y-6 max-w-xl">
-          <div>
-            <label for="name" class="block mb-1 font-medium">Nombre</label>
-            <input
-              formControlName="user_name"
-              type="text"
-              id="name"
-              required
-              class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
-            />
-            <div *ngIf="contactoForm.get('user_name')?.invalid && contactoForm.get('user_name')?.touched" class="text-red-500 text-sm">
-              El nombre es obligatorio.
-            </div>
-          </div>
-          <div>
-            <label for="email" class="block mb-1 font-medium">Correo electrónico</label>
-            <input
-              formControlName="user_email"
-              type="email"
-              id="email"
-              required
-              class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
-            />
-            <div *ngIf="contactoForm.get('user_email')?.invalid && contactoForm.get('user_email')?.touched" class="text-red-500 text-sm">
-              Introduce un correo electrónico válido.
-            </div>
-          </div>
-          <div>
-            <label for="message" class="block mb-1 font-medium">Mensaje</label>
-            <textarea
-              formControlName="message"
-              id="message"
-              rows="4"
-              required
-              class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
-            ></textarea>
-            <div *ngIf="contactoForm.get('message')?.invalid && contactoForm.get('message')?.touched" class="text-red-500 text-sm">
-              El mensaje es obligatorio.
-            </div>
-          </div>
-          <button
-            type="submit"
-            class="bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition"
-            [disabled]="contactoForm.invalid"
-          >
-            Enviar mensaje
-          </button>
-        </form>
-      </section>
-      
-      
-    <footer class="bg-gray-400 text-black py-8">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          class="flex flex-col md:flex-row justify-between items-center md:items-start"
-        >
-          <!-- Sección de redes sociales -->
-          <div class="flex space-x-6 mb-6 md:mb-0">
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              class="text-black hover:text-gray-700"
-            >
-              <i class="fab fa-facebook-f w-6 h-6"></i>
-            </a>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              class="text-black hover:text-gray-700"
-            >
-              <i class="fab fa-twitter w-6 h-6"></i>
-            </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              class="text-black hover:text-gray-700"
-            >
-              <i class="fab fa-instagram w-6 h-6"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              class="text-black hover:text-gray-700"
-            >
-              <i class="fab fa-linkedin-in w-6 h-6"></i>
-            </a>
-          </div>
-
-          <!-- Dirección -->
-          <div class="text-center md:text-left mb-6 md:mb-0">
-            <p class="text-lg font-semibold">Visítanos:</p>
-            <p class="text-sm">Calle Ficticia 123, Ciudad, País</p>
-          </div>
-
-          <!-- Derechos de autor -->
-          <div class="text-center md:text-right">
-            <p class="text-sm">
-              &copy; 2025 Ruido. Todos los derechos reservados.
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-</div>
+  </section>
+  <section
+    class="w-full bg-[#12161a] py-16 px-4 flex justify-center items-center"
+  >
+    <div class="max-w-4xl text-center">
+      <h2 class="text-white text-3xl font-bold mb-4">Quiénes somos</h2>
+      <p class="text-[#9dabb8] text-lg leading-relaxed">
+        En <span class="text-white font-semibold">Ruido</span> somos un equipo
+        apasionado por la tecnología, la educación y la creatividad. Nuestro
+        objetivo es ofrecer experiencias únicas de aprendizaje para que
+        cualquier persona pueda explorar, aprender y programar sin límites.
+      </p>
+      <p class="text-[#9dabb8] text-lg leading-relaxed mt-4">
+        Combinamos diseño, narrativa y código para construir una plataforma
+        donde el conocimiento es accesible, divertido y envolvente.
+      </p>
+    </div>
+  </section>
+</main>

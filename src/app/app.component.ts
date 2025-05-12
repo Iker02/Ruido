@@ -12,6 +12,7 @@ import { ButtonModule } from 'primeng/button';
 export class AppComponent implements AfterViewInit {
   title = 'ruido';
   isMenuOpen = false;
+  isScrolled = false;
 
 
   constructor(private spinner: NgxSpinnerService) {}
@@ -53,5 +54,10 @@ export class AppComponent implements AfterViewInit {
         this.isMenuOpen = false;
       }
     }
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 0;
   }
 }

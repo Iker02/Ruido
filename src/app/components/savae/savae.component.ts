@@ -3,13 +3,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import emailjs from 'emailjs-com';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-savae',
   standalone: false,
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'] 
+  templateUrl: './savae.component.html',
+  styleUrl: './savae.component.css'
 })
-export class HomeComponent  {
-  
+export class SavaeComponent {
   contactoForm!: FormGroup;
 
   constructor(private fb: FormBuilder) {}
