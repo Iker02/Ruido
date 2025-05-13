@@ -1,0 +1,71 @@
+#container {
+  position: relative;
+  height: 50vh;
+  width: 80vw;
+  background-color: #111;
+  border-radius: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 20px auto;
+  display: flex;
+}
+
+#slider {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.slide {
+  display: flex;
+  position: relative;
+  height: 100%;
+  background-color: #c80000;
+  border-radius: 10px;
+  border: solid 1px #aaa;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+}
+
+#scrubber {
+  display: block;
+  position: relative;
+  width: 80vw;
+  height: 10px;
+  border: solid 1px #aaa;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#handle {
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 100%;
+  background: #5923a5;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.controls div {
+  background-color: #5923a5;
+  color: #aaa;
+  padding: 5px 20px 10px;
+  font-size: 17px;
+  cursor: pointer;
+  border: none;
+  margin: 0 20px;
+  transition: background-color 0.3s ease;
+}
+
+.controls div:hover {
+  background-color: #3d1f76;
+}
