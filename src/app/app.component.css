@@ -1,4 +1,8 @@
-@keyframes spinOnce {
+.rotate-animation {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
@@ -7,34 +11,8 @@
   }
 }
 
-.rotate-animation {
-  animation: spinOnce 2s linear;
-}
-
 header {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-@keyframes slide-in {
-  from {
-    transform: translateX(100%) scale(0.8);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0) scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes slide-out {
-  from {
-    transform: translateX(1) scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(100%) scale(100%);
-    opacity: 0;
-  }
 }
 
 .animate-slide-in {
