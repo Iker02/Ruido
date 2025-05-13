@@ -11,6 +11,7 @@ import emailjs from 'emailjs-com';
 export class HomeComponent  {
   isMouseDown = false;
   contactoForm!: FormGroup;
+  selectedCard: any = null;
 
   constructor(private fb: FormBuilder) {}
 
@@ -53,5 +54,24 @@ export class HomeComponent  {
     } else {
       alert('Por favor, completa todos los campos');
     }
+  }
+
+  moveToCenter(index: number, carousel: HTMLElement) {
+    // Calculamos el desplazamiento que hace falta para centrar la carta
+    const cardWidth = carousel.children[index].clientWidth; // Ancho de la carta
+    const carouselWidth = carousel.clientWidth; // Ancho del contenedor del carrusel
+    const offset = (carouselWidth - cardWidth) / 2; // Desplazamiento necesario para centrar la carta
+
+    // Calcular la posición de desplazamiento dentro del carrusel
+    const newScrollPosition = (carousel.children[index] as HTMLElement).offsetLeft - offset;
+
+    // Mover el carrusel a la posición calculada
+    carousel.scrollTo({
+      left: newScrollPosition,
+      behavior: 'smooth',
+    });
+
+    // Actualizar la carta seleccionada para efectos visuales
+    this.selectedCard = this.cards[index];
   }
 }

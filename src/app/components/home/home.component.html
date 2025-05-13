@@ -25,8 +25,15 @@
 
 <div
   class="contenidoDeCartas flex overflow-x-auto no-scrollbar whitespace-nowrap snap-x snap-mandatory"
+  #carousel
 >
-  <div class="card flex-shrink-0 snap-start" style="width: 63.33%;" *ngFor="let card of cards">
+  <div
+    class="card flex-shrink-0 snap-start"
+    *ngFor="let card of cards; let i = index"
+    (click)="moveToCenter(i, carousel)"
+    [style.width]="selectedCard === card ? '80%' : '63.33%'"
+    [class.selected]="selectedCard === card"
+  >
     <img
       [src]="card.image"
       class="w-full object-cover h-[400px]"
@@ -40,6 +47,9 @@
     </div>
   </div>
 </div>
+
+
+
 <!-- TODO hacer que al hacer clic se muestre esa carta principalmente -->
 <main>
   <section>
