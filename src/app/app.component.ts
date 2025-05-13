@@ -16,13 +16,14 @@ export class AppComponent implements AfterViewInit {
   mostrarPopup = false;
   mostrarPopupW = false;
   ocultarPopup = true;
-  mensaje = 'Hola, me gustaría recibir información :)';
-  numeroWhatsapp = '34644356186'; // Reemplaza con el número de fede
+  mensaje = 'Hola, me gustaría recibir información sobre vuestra empresa :)';
+  numeroWhatsapp = '34644356186'; // Reemplazar con el número de fede
 
   constructor(
     private spinner: NgxSpinnerService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {}
+
   ngOnInit(): void {
     this.spinner.show();
   }
@@ -30,10 +31,13 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       window.addEventListener('load', () => {
-        this.spinner.hide();
+        setTimeout(() => {
+          this.spinner.hide();
+        }, 500); 
       });
     }
   }
+  
   
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -71,12 +75,5 @@ export class AppComponent implements AfterViewInit {
     const texto = encodeURIComponent(this.mensaje);
     const url = `https://wa.me/${this.numeroWhatsapp}?text=${texto}`;
     window.open(url, '_blank');
-  }
-
-  cerrarPopupConAnimacion() {
-    this.mostrarPopupW = false;
-    setTimeout(() => {
-      this.ocultarPopup = true;
-    }, 300); // igual a la duración de la animación
   }
 }
