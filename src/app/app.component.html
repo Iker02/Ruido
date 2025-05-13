@@ -5,7 +5,7 @@
 >
   <!-- Header fijo -->
   <header
-    class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 transition-colors duration-300"
+    class="group fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 transition-colors duration-300 hover:bg-white hover:text-black hover:shadow-md hover:border-b hover:border-black"
     [ngClass]="{
       'bg-white text-black shadow-md border-b border-black': isScrolled,
       'bg-transparent text-white': !isScrolled
@@ -20,8 +20,11 @@
         <img src="../assets/logo.png" alt="logo" />
       </div>
       <h2
-        class="text-lg font-bold tracking-[-0.015em]"
-        [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
+        class="text-lg font-bold tracking-[-0.015em] transition-colors duration-300 group-hover:text-black"
+        [ngClass]="{
+          'text-black': isScrolled,
+          'text-white': !isScrolled
+        }"
       >
         Ruido
       </h2>
@@ -49,20 +52,25 @@
         <nav class="flex flex-col space-y-4 text-lg font-medium">
           <a
             href="#"
-            [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
-            class="hover:text-blue-400 transition"
-            >Projects</a
+            class="hover:text-blue-400 transition-colors duration-300 group-hover:text-black"
+            [ngClass]="{
+              'text-black': isScrolled,
+              'text-white': !isScrolled
+            }"
           >
+            Projects
+          </a>
+
           <a
             href="#"
             [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
-            class="hover:text-blue-400 transition"
+            class="hover:text-blue-400 transition-colors duration-300 group-hover:text-black"
             >About</a
           >
           <a
             href="#"
             [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
-            class="hover:text-blue-400 transition"
+            class="hover:text-blue-400 transition-colors duration-300 group-hover:text-black"
             >Contact</a
           >
         </nav>
@@ -73,19 +81,20 @@
     <div class="hidden md:flex flex-1 justify-end gap-8">
       <div class="flex items-center gap-9">
         <a
-          class="text-sm font-medium leading-normal"
+          class="text-sm font-medium leading-normal transition-colors duration-300 group-hover:text-black"
           [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
           href="#"
-          >Projects</a
         >
+          Projects
+        </a>
         <a
-          class="text-sm font-medium leading-normal"
+          class="text-sm font-medium leading-normal transition-colors duration-300 group-hover:text-black"
           [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
           href="#"
           >About</a
         >
         <a
-          class="text-sm font-medium leading-normal"
+          class="text-sm font-medium leading-normal transition-colors duration-300 group-hover:text-black"
           [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
           href="#"
           >Contact</a
