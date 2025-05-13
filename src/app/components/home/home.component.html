@@ -1,292 +1,296 @@
 <div class="overflow-x-hidden">
-<div
-  class="body relative w-[100vw] h-[80vh] overflow-hidden aspect-video cursor-default"
->
-  <!-- Fondo fijo -->
   <div
-    class="fixed inset-0 bg-[url('../../../assets/productora-audiovisual-1024x488.jpg')] bg-cover bg-center z-0 w-100vw"
-  ></div>
-
-  <div class="flex">
-    <video
-      src="assets/22566-328624783.mp4"
-      autoplay
-      muted
-      loop
-      playsinline
-      class="w-full h-[80vh] object-none z-30"
-    ></video>
-  </div>
-</div>
-
-<div
-  class="contenidoDeCartas flex overflow-x-auto no-scrollbar whitespace-nowrap snap-x snap-mandatory"
-  #carousel
->
-  <!-- TODO hacer esto [draggable] -->
-  <div
-    class="card flex-shrink-0 snap-start w-[63.33%] sm:w-[63.33%] md:w-[45%] xl:w-[25%] z-20"
-    *ngFor="let card of cards"
+    class="body relative w-[100vw] h-[80vh] overflow-hidden aspect-video cursor-default"
   >
-    <img [src]="card.image" class="w-full object-cover h-[400px]" />
-    <div class="card__content p-4">
-      <p class="card__title text-xl font-semibold">{{ card.title }}</p>
-      <p class="card__description text-sm text-gray-600">
-        {{ card.description }}
-      </p>
-      <button
-        class="bg-[#d4c2a5] hover:bg-[#c2b196] px-6 py-2 rounded-full text-lg shadow-md fixed bottom-3 right-3"
-      >
-        Watch now
-      </button>
+    <!-- Fondo fijo -->
+    <div
+      class="fixed inset-0 bg-[url('../../../assets/productora-audiovisual-1024x488.jpg')] bg-cover bg-center z-0 w-100vw"
+    ></div>
+
+    <div class="flex">
+      <video
+        src="assets/22566-328624783.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        class="w-full h-[80vh] object-none z-30"
+      ></video>
     </div>
   </div>
-</div>
 
-<!-- TODO hacer que al hacer clic se muestre esa carta principalmente -->
-<section class="z-30 relative bg-white">
-  <om-marquee styleClass="marquee-custom-style text-white">
-    <div
-      class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-      #OmMarqueeContent
-    >
-      <img
-        src="../../../assets/camara-antigua.jpg"
-        alt=""
-        class="w-[260px] h-auto object-cover rounded-lg z-20"
-      />
-    </div>
-
-    <div
-      class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-      #OmMarqueeContent
-    >
-      <img
-        src="../../../assets/camara-antigua.jpg"
-        alt=""
-        class="w-[260px] h-auto object-cover rounded-lg"
-      />
-    </div>
-    <div
-      class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-      #OmMarqueeContent
-    >
-      <img
-        src="../../../assets/camara-antigua.jpg"
-        alt=""
-        class="w-[260px] h-auto object-cover rounded-lg"
-      />
-    </div>
-    <div
-      class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-      #OmMarqueeContent
-    >
-      <img
-        src="../../../assets/camara-antigua.jpg"
-        alt=""
-        class="w-[260px] h-auto object-cover rounded-lg"
-      />
-    </div>
-  </om-marquee>
-</section>
-
-<section class="w-full bg-[#f9f6f1] py-16 px-4 flex justify-center z-0">
   <div
-    class="w-full max-w-6xl bg-white p-8 rounded-3xl border-2 border-black shadow-md z-20"
+    class="contenidoDeCartas flex overflow-x-auto no-scrollbar whitespace-nowrap snap-x snap-mandatory"
+    #carousel
   >
-    <h2 class="text-black text-3xl font-semibold mb-10 text-center">
-      Proyectos recientes
-    </h2>
-
-    <div class="flex flex-col gap-10">
-      <!-- Card 1 -->
-      <div
-        class="flex flex-col md:flex-row gap-6 items-center rounded-2xl p-6 shadow-sm bg-[#fff]"
-      >
-        <div
-          class="w-full md:w-1/2 aspect-video bg-cover bg-center rounded-xl border-2 border-black"
-          style="
-            background-image: url('https://cdn.usegalileo.ai/sdxl10/4b61f325-7231-4b42-b984-1449588f853d.png');
-          "
-        ></div>
-
-        <div
-          class="w-full md:w-1/2 text-center flex flex-col items-center justify-center gap-4"
-        >
-          <p class="text-gray-600 text-sm">Cortometraje</p>
-          <p class="text-xl font-bold text-black">The Echo Chamber</p>
-          <p class="text-gray-700 text-sm leading-relaxed">
-            Una joven es atormentada por una misteriosa voz que solo ella puede
-            oír.<br />
-            Este cortometraje experimental explora la soledad psicológica y la
-            búsqueda de identidad mediante visuales surrealistas.
-          </p>
-          <button
-            class="bg-[#e0d8c3] text-black font-medium px-6 py-2 rounded-full shadow-md hover:scale-105 transition"
-          >
-            Ver ahora
-          </button>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div
-        class="flex flex-col md:flex-row-reverse gap-6 items-center rounded-2xl p-6 shadow-sm bg-[#fff]"
-      >
-        <div
-          class="w-full md:w-1/2 aspect-video bg-cover bg-center rounded-xl border-2 border-black"
-          style="
-            background-image: url('https://cdn.usegalileo.ai/sdxl10/851cf055-8af1-4059-9c8d-9bc68187e96d.png');
-          "
-        ></div>
-
-        <div
-          class="w-full md:w-1/2 text-center flex flex-col items-center justify-center gap-4"
-        >
-          <p class="text-gray-600 text-sm">Animación</p>
-          <p class="text-xl font-bold text-black">Silent Signals</p>
-          <p class="text-gray-700 text-sm leading-relaxed">
-            Una historia contada completamente mediante luz y movimiento en un
-            mundo distópico.<br />
-            Este corto animado elimina los diálogos y se enfoca en la emoción y
-            el movimiento.
-          </p>
-          <button
-            class="bg-[#e0d8c3] text-black font-medium px-6 py-2 rounded-full shadow-md border border-black hover:scale-105 transition"
-          >
-            Ver ahora
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section
-  class="w-full bg-[#353534] py-16 px-4 flex justify-center items-center border-t border-black"
->
-  <div
-    class="max-w-4xl text-center bg-white p-8 rounded-3xl shadow-md border-2 border-black z-20"
-  >
-    <h2 class="text-3xl font-semibold mb-6 text-black">Quiénes somos</h2>
-    <p class="text-[#333] text-lg leading-relaxed">
-      En <span class="font-semibold">Ruido</span>somos un equipo apasionado por
-      la tecnología, la educación y la creatividad. Nuestro objetivo es ofrecer
-      experiencias únicas de aprendizaje para que cualquier persona pueda
-      explorar, aprender y programar sin límites.
-    </p>
-    <p class="text-[#333] text-lg leading-relaxed mt-4">
-      Combinamos diseño, narrativa y código para construir una plataforma donde
-      el conocimiento es accesible, divertido y envolvente.
-    </p>
-  </div>
-</section>
-
-<div class="flex flex-col md:flex-row">
-  <!-- Imagen -->
-  <div class="md:w-1/2 w-full z-20">
-    <img
-      src="../../../assets/video_musical2.jpg"
-      alt="Cinema"
-      class="object-cover w-full h-full"
-    />
-  </div>
-
-  <!-- Formulario -->
-  <div
-    class="md:w-1/2 w-full flex items-center justify-center p-6 relative z-20"
-  >
-    <!-- Fondo con opacidad -->
-    <div class="absolute inset-0 bg-[#f9f6f1] z-0"></div>
-
-    <!-- Contenido del formulario -->
-    <form class="w-full max-w-md space-y-6 relative z-10">
-      <h2
-        class="text-3xl font-semibold text-center bg-white rounded-full border-2 border-black shadow-md focus:outline-none p-3"
-      >
-        Connect Now
-      </h2>
-
-      <input
-        type="text"
-        placeholder="Name"
-        class="w-full px-4 py-3 rounded-full border-2 border-black shadow-md focus:outline-none"
-      />
-      <input
-        type="tel"
-        placeholder="Phone"
-        class="w-full px-4 py-3 rounded-full border-2 border-black shadow-md focus:outline-none"
-      />
-      <input
-        type="email"
-        placeholder="Email"
-        class="w-full px-4 py-3 rounded-full border-2 border-black shadow-md focus:outline-none"
-      />
-      <textarea
-        rows="4"
-        placeholder="Message"
-        class="w-full px-4 py-3 rounded-3xl border-2 border-black shadow-md focus:outline-none resize-none"
-      ></textarea>
-
-      <div class="text-center">
+    <!-- TODO hacer esto [draggable] -->
+    <div
+      class="card flex-shrink-0 snap-start w-[63.33%] sm:w-[63.33%] md:w-[45%] xl:w-[25%] z-20"
+      *ngFor="let card of cards"
+    >
+      <img [src]="card.image" class="w-full object-cover h-[400px]" />
+      <div class="card__content p-4">
+        <p class="card__title text-xl font-semibold">{{ card.title }}</p>
+        <p class="card__description text-sm text-gray-600">
+          {{ card.description }}
+        </p>
         <button
-          type="submit"
-          class="bg-[#d4c2a5] hover:bg-[#c2b196] px-6 py-2 rounded-full text-lg shadow-md"
+          class="bg-[#d4c2a5] hover:bg-[#c2b196] px-6 py-2 rounded-full text-lg shadow-md fixed bottom-3 right-3"
         >
-          Send
+          Watch now
         </button>
       </div>
-    </form>
-  </div>
-</div>
-<footer class="bg-gray-400 text-black py-8 z-30 relative">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div
-      class="flex flex-col md:flex-row justify-between items-center md:items-start"
-    >
-      <!-- Sección de redes sociales -->
-      <div class="flex space-x-6 mb-6 md:mb-0">
-        <a
-          href="https://www.facebook.com"
-          target="_blank"
-          class="text-black hover:text-gray-700"
-        >
-          <i class="fab fa-facebook-f w-6 h-6"></i>
-        </a>
-        <a
-          href="https://www.twitter.com"
-          target="_blank"
-          class="text-black hover:text-gray-700"
-        >
-          <i class="fab fa-twitter w-6 h-6"></i>
-        </a>
-        <a
-          href="https://www.instagram.com"
-          target="_blank"
-          class="text-black hover:text-gray-700"
-        >
-          <i class="fab fa-instagram w-6 h-6"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com"
-          target="_blank"
-          class="text-black hover:text-gray-700"
-        >
-          <i class="fab fa-linkedin-in w-6 h-6"></i>
-        </a>
-      </div>
-
-      <!-- Dirección -->
-      <div class="text-center md:text-left mb-6 md:mb-0">
-        <p class="text-lg font-semibold">Visítanos:</p>
-        <p class="text-sm">Calle Ficticia 123, Ciudad, País</p>
-      </div>
-
-      <!-- Derechos de autor -->
-      <div class="text-center md:text-right">
-        <p class="text-sm">&copy; 2025 Ruido. Todos los derechos reservados.</p>
-      </div>
     </div>
   </div>
-</footer>
+
+  <app-draggable-carousel></app-draggable-carousel>
+
+  <!-- TODO hacer que al hacer clic se muestre esa carta principalmente -->
+  <section class="z-30 relative bg-white">
+    <om-marquee styleClass="marquee-custom-style text-white">
+      <div
+        class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+        #OmMarqueeContent
+      >
+        <img
+          src="../../../assets/camara-antigua.jpg"
+          alt=""
+          class="w-[260px] h-auto object-cover rounded-lg z-20"
+        />
+      </div>
+
+      <div
+        class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+        #OmMarqueeContent
+      >
+        <img
+          src="../../../assets/camara-antigua.jpg"
+          alt=""
+          class="w-[260px] h-auto object-cover rounded-lg"
+        />
+      </div>
+      <div
+        class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+        #OmMarqueeContent
+      >
+        <img
+          src="../../../assets/camara-antigua.jpg"
+          alt=""
+          class="w-[260px] h-auto object-cover rounded-lg"
+        />
+      </div>
+      <div
+        class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+        #OmMarqueeContent
+      >
+        <img
+          src="../../../assets/camara-antigua.jpg"
+          alt=""
+          class="w-[260px] h-auto object-cover rounded-lg"
+        />
+      </div>
+    </om-marquee>
+  </section>
+
+  <section class="w-full bg-[#f9f6f1] py-16 px-4 flex justify-center z-0">
+    <div
+      class="w-full max-w-6xl bg-white p-8 rounded-3xl border-2 border-black shadow-md z-20"
+    >
+      <h2 class="text-black text-3xl font-semibold mb-10 text-center">
+        Proyectos recientes
+      </h2>
+
+      <div class="flex flex-col gap-10">
+        <!-- Card 1 -->
+        <div
+          class="flex flex-col md:flex-row gap-6 items-center rounded-2xl p-6 shadow-sm bg-[#fff]"
+        >
+          <div
+            class="w-full md:w-1/2 aspect-video bg-cover bg-center rounded-xl border-2 border-black"
+            style="
+              background-image: url('https://cdn.usegalileo.ai/sdxl10/4b61f325-7231-4b42-b984-1449588f853d.png');
+            "
+          ></div>
+
+          <div
+            class="w-full md:w-1/2 text-center flex flex-col items-center justify-center gap-4"
+          >
+            <p class="text-gray-600 text-sm">Cortometraje</p>
+            <p class="text-xl font-bold text-black">The Echo Chamber</p>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              Una joven es atormentada por una misteriosa voz que solo ella
+              puede oír.<br />
+              Este cortometraje experimental explora la soledad psicológica y la
+              búsqueda de identidad mediante visuales surrealistas.
+            </p>
+            <button
+              class="bg-[#e0d8c3] text-black font-medium px-6 py-2 rounded-full shadow-md hover:scale-105 transition"
+            >
+              Ver ahora
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="flex flex-col md:flex-row-reverse gap-6 items-center rounded-2xl p-6 shadow-sm bg-[#fff]"
+        >
+          <div
+            class="w-full md:w-1/2 aspect-video bg-cover bg-center rounded-xl border-2 border-black"
+            style="
+              background-image: url('https://cdn.usegalileo.ai/sdxl10/851cf055-8af1-4059-9c8d-9bc68187e96d.png');
+            "
+          ></div>
+
+          <div
+            class="w-full md:w-1/2 text-center flex flex-col items-center justify-center gap-4"
+          >
+            <p class="text-gray-600 text-sm">Animación</p>
+            <p class="text-xl font-bold text-black">Silent Signals</p>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              Una historia contada completamente mediante luz y movimiento en un
+              mundo distópico.<br />
+              Este corto animado elimina los diálogos y se enfoca en la emoción
+              y el movimiento.
+            </p>
+            <button
+              class="bg-[#e0d8c3] text-black font-medium px-6 py-2 rounded-full shadow-md border border-black hover:scale-105 transition"
+            >
+              Ver ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="w-full bg-[#353534] py-16 px-4 flex justify-center items-center border-t border-black"
+  >
+    <div
+      class="max-w-4xl text-center bg-white p-8 rounded-3xl shadow-md border-2 border-black z-20"
+    >
+      <h2 class="text-3xl font-semibold mb-6 text-black">Quiénes somos</h2>
+      <p class="text-[#333] text-lg leading-relaxed">
+        En <span class="font-semibold">Ruido</span>somos un equipo apasionado
+        por la tecnología, la educación y la creatividad. Nuestro objetivo es
+        ofrecer experiencias únicas de aprendizaje para que cualquier persona
+        pueda explorar, aprender y programar sin límites.
+      </p>
+      <p class="text-[#333] text-lg leading-relaxed mt-4">
+        Combinamos diseño, narrativa y código para construir una plataforma
+        donde el conocimiento es accesible, divertido y envolvente.
+      </p>
+    </div>
+  </section>
+
+  <div class="flex flex-col md:flex-row">
+    <!-- Imagen -->
+    <div class="md:w-1/2 w-full z-20">
+      <img
+        src="../../../assets/video_musical2.jpg"
+        alt="Cinema"
+        class="object-cover w-full h-full"
+      />
+    </div>
+
+    <!-- Formulario -->
+    <div
+      class="md:w-1/2 w-full flex items-center justify-center p-6 relative z-20"
+    >
+      <!-- Fondo con opacidad -->
+      <div class="absolute inset-0 bg-[#f9f6f1] z-0"></div>
+
+      <!-- Contenido del formulario -->
+      <form class="w-full max-w-md space-y-6 relative z-10">
+        <h2
+          class="text-3xl font-semibold text-center bg-white rounded-full border-2 border-black shadow-md focus:outline-none p-3"
+        >
+          Connect Now
+        </h2>
+
+        <input
+          type="text"
+          placeholder="Name"
+          class="w-full px-4 py-3 rounded-full border-2 border-black shadow-md focus:outline-none"
+        />
+        <input
+          type="tel"
+          placeholder="Phone"
+          class="w-full px-4 py-3 rounded-full border-2 border-black shadow-md focus:outline-none"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          class="w-full px-4 py-3 rounded-full border-2 border-black shadow-md focus:outline-none"
+        />
+        <textarea
+          rows="4"
+          placeholder="Message"
+          class="w-full px-4 py-3 rounded-3xl border-2 border-black shadow-md focus:outline-none resize-none"
+        ></textarea>
+
+        <div class="text-center">
+          <button
+            type="submit"
+            class="bg-[#d4c2a5] hover:bg-[#c2b196] px-6 py-2 rounded-full text-lg shadow-md"
+          >
+            Send
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer class="bg-gray-400 text-black py-8 z-30 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center md:items-start"
+      >
+        <!-- Sección de redes sociales -->
+        <div class="flex space-x-6 mb-6 md:mb-0">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            class="text-black hover:text-gray-700"
+          >
+            <i class="fab fa-facebook-f w-6 h-6"></i>
+          </a>
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            class="text-black hover:text-gray-700"
+          >
+            <i class="fab fa-twitter w-6 h-6"></i>
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            class="text-black hover:text-gray-700"
+          >
+            <i class="fab fa-instagram w-6 h-6"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            class="text-black hover:text-gray-700"
+          >
+            <i class="fab fa-linkedin-in w-6 h-6"></i>
+          </a>
+        </div>
+
+        <!-- Dirección -->
+        <div class="text-center md:text-left mb-6 md:mb-0">
+          <p class="text-lg font-semibold">Visítanos:</p>
+          <p class="text-sm">Calle Ficticia 123, Ciudad, País</p>
+        </div>
+
+        <!-- Derechos de autor -->
+        <div class="text-center md:text-right">
+          <p class="text-sm">
+            &copy; 2025 Ruido. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </div>

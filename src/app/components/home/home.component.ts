@@ -82,7 +82,8 @@ export class HomeComponent {
     const offset = (carouselWidth - cardWidth) / 2; // Desplazamiento necesario para centrar la carta
 
     // Calcular la posición de desplazamiento dentro del carrusel
-    const newScrollPosition = (carousel.children[index] as HTMLElement).offsetLeft - offset;
+    const newScrollPosition =
+      (carousel.children[index] as HTMLElement).offsetLeft - offset;
 
     // Mover el carrusel a la posición calculada
     carousel.scrollTo({
