@@ -44,7 +44,7 @@
   </div>
 
   <!-- TODO hacer que al hacer clic se muestre esa carta principalmente -->
-  <section class="z-30 relative bg-white">
+  <section class="z-30 relative bg-white overflow-hidden">
     <om-marquee styleClass="marquee-custom-style text-white">
       <div
         class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
@@ -90,75 +90,112 @@
     </om-marquee>
   </section>
 
-  <style>
-    html,
-    section {
-      position: relative;
-      height: 100%;
-    }
+  <main class="relative bg-transparent font-sans text-black text-sm m-0 p-0">
+    <h2
+      class="text-3xl font-semibold text-center bg-white rounded-full border-2 border-black shadow-md focus:outline-none p-3 mt-4"
+    >
+      Nuestros mejores proyectos
+    </h2>
 
-    section {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
-    swiper-container {
-      width: 100%;
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-
-    swiper-slide {
-      background-position: center;
-      background-size: cover;
-      width: 300px;
-      height: 300px;
-    }
-
-    swiper-slide img {
-      display: block;
-      width: 100%;
-    }
-  </style>
-
-<section>
-  <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
-    slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
-    coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
-    <swiper-slide>
-      <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-    </swiper-slide>
-  </swiper-container>
-</section>
-
+    <ng-container *ngIf="isBrowser">
+      <swiper-container
+        class="w-full pt-12 pb-12"
+        pagination="true"
+        effect="coverflow"
+        grab-cursor="true"
+        centered-slides="true"
+        slides-per-view="auto"
+        coverflow-effect-rotate="50"
+        coverflow-effect-stretch="0"
+        coverflow-effect-depth="100"
+        coverflow-effect-modifier="1"
+        coverflow-effect-slide-shadows="true"
+        aria-label="Carrusel de imágenes de proyectos"
+      >
+        <swiper-slide
+          class="bg-center bg-cover w-[300px] h-[300px] rounded-lg shadow-lg"
+        >
+          <img
+            class="block w-full h-full object-cover rounded-lg"
+            src="https://swiperjs.com/demos/images/nature-1.jpg"
+            alt="Proyecto de naturaleza 1"
+          />
+        </swiper-slide>
+        <swiper-slide
+          class="bg-center bg-cover w-[300px] h-[300px] rounded-lg shadow-lg"
+        >
+          <img
+            class="block w-full h-full object-cover rounded-lg"
+            src="https://swiperjs.com/demos/images/nature-2.jpg"
+            alt="Proyecto de naturaleza 2"
+          />
+        </swiper-slide>
+        <swiper-slide
+          class="bg-center bg-cover w-[300px] h-[300px] rounded-lg shadow-lg"
+        >
+          <img
+            class="block w-full h-full object-cover rounded-lg"
+            src="https://swiperjs.com/demos/images/nature-3.jpg"
+            alt="Proyecto de naturaleza 3"
+          />
+        </swiper-slide>
+        <swiper-slide
+          class="bg-center bg-cover w-[300px] h-[300px] rounded-lg shadow-lg"
+        >
+          <img
+            class="block w-full h-full object-cover rounded-lg"
+            src="https://swiperjs.com/demos/images/nature-4.jpg"
+            alt="Proyecto de naturaleza 4"
+          />
+        </swiper-slide>
+        <swiper-slide
+          class="bg-center bg-cover w-[300px] h-[300px] rounded-lg shadow-lg"
+        >
+          <img
+            class="block w-full h-full object-cover rounded-lg"
+            src="https://swiperjs.com/demos/images/nature-5.jpg"
+            alt="Proyecto de naturaleza 5"
+          />
+        </swiper-slide>
+        <swiper-slide
+          class="bg-center bg-cover w-[300px] h-[300px] rounded-lg shadow-lg"
+        >
+          <img
+            class="block w-full h-full object-cover rounded-lg"
+            src="https://swiperjs.com/demos/images/nature-6.jpg"
+            alt="Proyecto de naturaleza 6"
+          />
+        </swiper-slide>
+        <swiper-slide
+          class="bg-center bg-cover w-[300px] h-[300px] rounded-lg shadow-lg"
+        >
+          <img
+            class="block w-full h-full object-cover rounded-lg"
+            src="https://swiperjs.com/demos/images/nature-7.jpg"
+            alt="Proyecto de naturaleza 7"
+          />
+        </swiper-slide>
+        <swiper-slide
+          class="bg-center bg-cover w-[300px] h-[300px] rounded-lg shadow-lg"
+        >
+          <img
+            class="block w-full h-full object-cover rounded-lg"
+            src="https://swiperjs.com/demos/images/nature-8.jpg"
+            alt="Proyecto de naturaleza 8"
+          />
+        </swiper-slide>
+        <swiper-slide
+          class="bg-center bg-cover w-[300px] h-[300px] rounded-lg shadow-lg"
+        >
+          <img
+            class="block w-full h-full object-cover rounded-lg"
+            src="https://swiperjs.com/demos/images/nature-9.jpg"
+            alt="Proyecto de naturaleza 9"
+          />
+        </swiper-slide>
+      </swiper-container>
+    </ng-container>
+  </main>
 
   <section
     class="w-full bg-[#353534] py-16 px-4 flex justify-center items-center border-t border-black"
@@ -180,6 +217,8 @@
     </div>
   </section>
 
+  <app-about-us-card></app-about-us-card>
+
   <div class="flex flex-col md:flex-row">
     <!-- Imagen -->
     <div class="md:w-1/2 w-full z-20">
@@ -192,51 +231,52 @@
 
     <!-- Formulario -->
     <div
-      class="md:w-1/2 w-full flex items-center justify-center p-6 relative z-20"
+      class="md:w-1/2 w-full flex items-center justify-center p-8 relative z-20"
     >
       <!-- Fondo con opacidad -->
-      <div class="absolute inset-0 bg-[#f9f6f1] z-0"></div>
+      <div class="absolute inset-0 bg-opacity-40 bg-gray-100 z-0"></div>
 
       <!-- Contenido del formulario -->
-      <form class="w-full max-w-md space-y-6 relative z-10">
-        <h2
-          class="text-3xl font-semibold text-center bg-white rounded-full border-2 border-black shadow-md focus:outline-none p-3"
-        >
-          Connect Now
+      <form
+        class="w-full max-w-lg space-y-6 relative z-10 bg-white p-8 rounded-xl shadow-lg"
+      >
+        <h2 class="text-3xl font-semibold text-center text-gray-800 mb-6">
+          Conecta con nosotros
         </h2>
 
         <input
           type="text"
-          placeholder="Name"
-          class="w-full px-4 py-3 rounded-full border-2 border-black shadow-md focus:outline-none"
+          placeholder="Nombre"
+          class="w-full px-6 py-3 rounded-xl border-2 border-gray-300 focus:ring-2 focus:ring-[#d4c2a5] transition duration-300"
         />
         <input
           type="tel"
-          placeholder="Phone"
-          class="w-full px-4 py-3 rounded-full border-2 border-black shadow-md focus:outline-none"
+          placeholder="Teléfono"
+          class="w-full px-6 py-3 rounded-xl border-2 border-gray-300 focus:ring-2 focus:ring-[#d4c2a5] transition duration-300"
         />
         <input
           type="email"
-          placeholder="Email"
-          class="w-full px-4 py-3 rounded-full border-2 border-black shadow-md focus:outline-none"
+          placeholder="Correo"
+          class="w-full px-6 py-3 rounded-xl border-2 border-gray-300 focus:ring-2 focus:ring-[#d4c2a5] transition duration-300"
         />
         <textarea
           rows="4"
-          placeholder="Message"
-          class="w-full px-4 py-3 rounded-3xl border-2 border-black shadow-md focus:outline-none resize-none"
+          placeholder="Mensaje"
+          class="w-full px-6 py-3 rounded-3xl border-2 border-gray-300 focus:ring-2 focus:ring-[#d4c2a5] transition duration-300 resize-none"
         ></textarea>
 
         <div class="text-center">
           <button
             type="submit"
-            class="bg-[#d4c2a5] hover:bg-[#c2b196] px-6 py-2 rounded-full text-lg shadow-md"
+            class="bg-[#d4c2a5] hover:bg-[#c2b196] px-8 py-3 rounded-full text-lg font-semibold text-white shadow-md transition duration-300 ease-in-out transform hover:scale-105"
           >
-            Send
+            Enviar
           </button>
         </div>
       </form>
     </div>
   </div>
+
   <footer class="bg-gray-400 text-black py-8 z-30 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div
@@ -290,4 +330,3 @@
     </div>
   </footer>
 </div>
-

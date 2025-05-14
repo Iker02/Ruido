@@ -14,6 +14,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { NgxMarqueeComponent } from '@omnedia/ngx-marquee';
 import { RouterModule } from '@angular/router';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { AboutUsCardComponent } from './components/about-us-card/about-us-card.component';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, ErrorComponent],
@@ -26,6 +27,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     ReactiveFormsModule,
     NgxSpinnerModule,
     BrowserAnimationsModule,
+    AboutUsCardComponent,
   ],
   providers: [provideClientHydration(withEventReplay())],
   bootstrap: [AppComponent],
