@@ -14,7 +14,6 @@ import { ErrorComponent } from './components/error/error.component';
 import { NgxMarqueeComponent } from '@omnedia/ngx-marquee';
 import { RouterModule } from '@angular/router';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { DraggableCarouselComponent } from './components/draggable-carousel/draggable-carousel.component';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, ErrorComponent],
@@ -27,7 +26,6 @@ import { DraggableCarouselComponent } from './components/draggable-carousel/drag
     ReactiveFormsModule,
     NgxSpinnerModule,
     BrowserAnimationsModule,
-    DraggableCarouselComponent,
   ],
   providers: [provideClientHydration(withEventReplay())],
   bootstrap: [AppComponent],

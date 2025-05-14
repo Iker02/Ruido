@@ -5,3 +5,11 @@ popup whatsapp abajo a la derecha
 cada carta tiene un hover con texto por detrás 
 dar mucho protagonismo al contenido en sí
 sin espacios en medio
+
+• logo centrado
+• ⁠cinta transportadora (en blanco o transparente) un poco más fina.
+• ⁠En la sección de  ^casos de éxito^  (Watch now) . La idea es que esté una foto del proyecto, y que cuando se acerque el cursor se ponga más opaco, y se lea la info que vamos a pasarte, y tenga un botón ^dejame ver^ y se abra un reel del proyecto.
+• ⁠en la otra sección, van a ir fotos (muchas) en ese carrusel q nos propusiste.
+• ⁠eliminamos la sección  ^prpyectos recientes^
+• ⁠quienes somos que tenga más valor, que ocupe toda la pantalla, le vamos a sumar unas fotos nuestras y el texto que también ya te pasaremos.
+• ⁠en la sección CONTACTOS: le demos una vuelta de rosca, para que quede más elegante y moderna
