@@ -30,50 +30,58 @@
       </h2>
     </div>
 
-    <!-- Sidebar (Menú lateral) -->
+    <!-- Sidebar -->
     <div
       id="sidebar-menu"
-      class="fixed top-0 right-0 h-full w-64 bg-[#111418] text-white transform transition-transform duration-300 ease-in-out z-50 border-l-2 border-gray-300"
+      class="fixed top-0 right-0 h-full w-64 bg-white text-black shadow-2xl transform transition-transform duration-300 ease-in-out z-50 border-l border-gray-300"
       [ngClass]="{
         'translate-x-0': isMenuOpen,
         'translate-x-full': !isMenuOpen
       }"
     >
-      <div class="p-5 flex flex-col space-y-6">
-        <!-- Botón cerrar -->
-        <button
-          (click)="closeMenu()"
-          class="self-end text-gray-400 hover:text-white text-2xl transform transition-transform duration-150 ease-in-out active:scale-90"
-        >
-          <i class="fa-regular fa-circle-xmark"></i>
-        </button>
+      <div class="p-6 flex flex-col justify-between h-full">
+        <!-- Encabezado -->
+        <div>
+          <h2 class="text-xl font-bold mb-6 tracking-wide text-gray-800">
+            Menú
+          </h2>
 
-        <!-- Navegación -->
-        <nav class="flex flex-col space-y-4 text-lg font-medium">
-          <a
-            href="#"
-            class="hover:text-blue-400 transition-colors duration-300 group-hover:text-black"
-            [ngClass]="{
-              'text-black': isScrolled,
-              'text-white': !isScrolled
-            }"
-          >
-            Projects
-          </a>
+          <!-- Navegación -->
+          <nav class="flex flex-col space-y-4 text-base font-medium">
+            <a
+              href="#"
+              [ngClass]="{
+                'text-black': isScrolled,
+                'text-gray-800': !isScrolled
+              }"
+            >
+              Proyectos
+            </a>
+            <a
+              href="#"
+              [ngClass]="{
+                'text-black': isScrolled,
+                'text-gray-800': !isScrolled
+              }"
+            >
+              Sobre Nosotros
+            </a>
+            <a
+              href="#"
+              [ngClass]="{
+                'text-black': isScrolled,
+                'text-gray-800': !isScrolled
+              }"
+            >
+              Contacto
+            </a>
+          </nav>
+        </div>
 
-          <a
-            href="#"
-            [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
-            class="hover:text-blue-400 transition-colors duration-300 group-hover:text-black"
-            >About</a
-          >
-          <a
-            href="#"
-            [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
-            class="hover:text-blue-400 transition-colors duration-300 group-hover:text-black"
-            >Contact</a
-          >
-        </nav>
+        <!-- Footer del menú -->
+        <div class="text-sm text-gray-500 border-t border-gray-200 pt-4">
+          &copy; 2025 Ruido
+        </div>
       </div>
     </div>
 
@@ -117,7 +125,7 @@
       id="menu-toggle-btn"
       (click)="toggleMenu()"
       class="md:hidden flex items-center justify-center p-2 rounded-lg transition-all duration-150 ease-in-out active:scale-90 active:rotate-180"
-      [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
+      [ngClass]="{ 'text-black': isScrolled, 'text-amber-50': !isScrolled }"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
