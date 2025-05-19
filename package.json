@@ -21,7 +21,6 @@
     "@angular/platform-server": "^19.2.0",
     "@angular/router": "^19.2.0",
     "@angular/ssr": "^19.2.10",
-    "@netlify/angular-runtime": "^2.3.1",
     "@omnedia/ngx-marquee": "^2.2.0",
     "@primeng/themes": "^19.1.2",
     "@tailwindcss/vite": "^4.1.6",
