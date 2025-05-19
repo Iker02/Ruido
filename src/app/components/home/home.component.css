@@ -2,6 +2,11 @@
   overflow-y: hidden;
 }
 
+:host {
+  font-family: 'Panchang', sans-serif;
+}
+
+
 .clip-hexagon {
   clip-path: polygon(25% 0%, 85% 0%, 100% 100%, 25% 100%, 0% 80%);
 }
@@ -120,3 +125,6 @@
   line-height: 1.4;
 }
 
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}

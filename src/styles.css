@@ -1,2 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'Panchang';
+  src: url('./assets/fonts/Panchang-Variable.ttf') format('truetype');
+  font-weight: 100 900; /* variable font weight range */
+  font-style: normal;
+}
