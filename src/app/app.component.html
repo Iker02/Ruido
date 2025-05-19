@@ -29,6 +29,16 @@
         Ruido
       </h2>
     </div>
+    <div
+      class="block lg:hidden xl:hidden bg-white absolute top-0 left-0 w-full text-black text-sm font-semibold mt-16 z-40"
+    >
+      <om-marquee [direction]="'left'" [speed]="50" [pauseOnHover]="false">
+        <div #OmMarqueeContent>
+          Bienvenido a Ruido — Descubre, aprende y desarrolla tus habilidades en
+          programación sin límites.
+        </div>
+      </om-marquee>
+    </div>
 
     <!-- Sidebar -->
     <div
@@ -80,7 +90,7 @@
 
         <!-- Footer del menú -->
         <div class="text-sm text-gray-500 border-t border-gray-200 pt-4">
-          &copy; 2025 Ruido
+          &copy; {{ getYear() }} Ruido
         </div>
       </div>
     </div>
@@ -93,19 +103,19 @@
           [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
           href="#"
         >
-          Projects
+          Proyectos
         </a>
         <a
           class="text-sm font-medium leading-normal transition-colors duration-300 group-hover:text-black"
           [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
           href="#"
-          >About</a
+          >Sobre nosotros</a
         >
         <a
           class="text-sm font-medium leading-normal transition-colors duration-300 group-hover:text-black"
           [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
           href="#"
-          >Contact</a
+          >Contacto</a
         >
       </div>
       <div
