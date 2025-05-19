@@ -15,7 +15,10 @@ export class HomeComponent {
   selectedCard: any = null;
   isBrowser = false;
 
-  constructor(private fb: FormBuilder, @Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(
+    private fb: FormBuilder,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
 
@@ -97,5 +100,9 @@ export class HomeComponent {
 
     // Actualizar la carta seleccionada para efectos visuales
     this.selectedCard = this.cards[index];
+  }
+
+  getYear(): number {
+    return new Date().getFullYear();
   }
 }
