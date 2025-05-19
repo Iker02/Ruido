@@ -1,9 +1,3 @@
-:host {
-  font-family: 'Panchang', sans-serif;
-}
-
-
-
 .rotate-animation {
   animation: spin 2s linear infinite;
 }
