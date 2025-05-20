@@ -93,111 +93,55 @@
     </om-marquee>
   </section>
 
-  <main class="relative bg-transparent font-sans text-black text-sm m-0 p-0">
-    <h2
-      class="text-3xl text-center bg-white border-[6px] border-black shadow-[8px_8px_0_#000] transition-transform duration-300 hover:-translate-x-[4px] hover:-translate-y-[4px] hover:shadow-[12px_12px_0_#000] p-4 mt-6 w-fit mx-auto"
+  <main class="relative bg-transparent text-black text-sm m-0 p-0">
+    <!-- signature-project.component.html -->
+    <div
+      class="flex flex-col md:flex-row-reverse items-center justify-between p-6 md:p-16 gap-8"
     >
-      Nuestros mejores proyectos
-    </h2>
+      <!-- Text Side -->
+      <div class="w-full md:w-1/2 text-center md:text-left z-30">
+        <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+          Our <br />
+          <span class="text-black">Signature</span><br />
+          Projects
+        </h2>
+        <p class="text-gray-600 text-base md:text-lg mb-6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
 
-    <ng-container *ngIf="isBrowser">
-      <swiper-container
-        class="w-full pt-12 pb-6"
-        pagination="true"
-        effect="coverflow"
-        grab-cursor="true"
-        centered-slides="true"
-        slides-per-view="auto"
-        coverflow-effect-rotate="50"
-        coverflow-effect-stretch="0"
-        coverflow-effect-depth="100"
-        coverflow-effect-modifier="1"
-        coverflow-effect-slide-shadows="true"
-        aria-label="Carrusel de imágenes de proyectos"
+        <!-- Mini gallery -->
+        <div class="flex gap-4 justify-center md:justify-start">
+          <img
+            *ngFor="let img of gallery"
+            [src]="img"
+            class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover cursor-pointer hover:scale-105 transition"
+            (click)="setMainImage(img)"
+            alt="Mini project"
+          />
+        </div>
+      </div>
+
+      <!-- Image Side -->
+      <div
+        class="w-full md:w-1/2 relative rounded-3xl overflow-hidden shadow-lg"
       >
-        <swiper-slide
-          class="bg-white border-[5px] border-black shadow-[8px_8px_0_#000] transition-transform duration-300 hover:-translate-x-[4px] hover:-translate-y-[4px] hover:shadow-[12px_12px_0_#000] w-[300px] h-[300px] rounded-lg overflow-hidden"
+        <img
+          [src]="mainImage"
+          alt="Main Project"
+          class="w-full h-auto object-cover rounded-3xl"
+        />
+        <!-- Button -->
+        <button
+          class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-2 rounded-full flex items-center gap-2 hover:bg-gray-800 transition"
         >
-          <img
-            class="block w-full h-full object-cover"
-            src="https://swiperjs.com/demos/images/nature-1.jpg"
-            alt="Proyecto de naturaleza 1"
-          />
-        </swiper-slide>
-        <swiper-slide
-          class="bg-white border-[5px] border-black shadow-[8px_8px_0_#000] transition-transform duration-300 hover:-translate-x-[4px] hover:-translate-y-[4px] hover:shadow-[12px_12px_0_#000] w-[300px] h-[300px] rounded-lg overflow-hidden"
-        >
-          <img
-            class="block w-full h-full object-cover"
-            src="https://swiperjs.com/demos/images/nature-2.jpg"
-            alt="Proyecto de naturaleza 2"
-          />
-        </swiper-slide>
-        <swiper-slide
-          class="bg-white border-[5px] border-black shadow-[8px_8px_0_#000] transition-transform duration-300 hover:-translate-x-[4px] hover:-translate-y-[4px] hover:shadow-[12px_12px_0_#000] w-[300px] h-[300px] rounded-lg overflow-hidden"
-        >
-          <img
-            class="block w-full h-full object-cover"
-            src="https://swiperjs.com/demos/images/nature-3.jpg"
-            alt="Proyecto de naturaleza 3"
-          />
-        </swiper-slide>
-        <swiper-slide
-          class="bg-white border-[5px] border-black shadow-[8px_8px_0_#000] transition-transform duration-300 hover:-translate-x-[4px] hover:-translate-y-[4px] hover:shadow-[12px_12px_0_#000] w-[300px] h-[300px] rounded-lg overflow-hidden"
-        >
-          <img
-            class="block w-full h-full object-cover"
-            src="https://swiperjs.com/demos/images/nature-4.jpg"
-            alt="Proyecto de naturaleza 4"
-          />
-        </swiper-slide>
-        <swiper-slide
-          class="bg-white border-[5px] border-black shadow-[8px_8px_0_#000] transition-transform duration-300 hover:-translate-x-[4px] hover:-translate-y-[4px] hover:shadow-[12px_12px_0_#000] w-[300px] h-[300px] rounded-lg overflow-hidden"
-        >
-          <img
-            class="block w-full h-full object-cover"
-            src="https://swiperjs.com/demos/images/nature-5.jpg"
-            alt="Proyecto de naturaleza 5"
-          />
-        </swiper-slide>
-        <swiper-slide
-          class="bg-white border-[5px] border-black shadow-[8px_8px_0_#000] transition-transform duration-300 hover:-translate-x-[4px] hover:-translate-y-[4px] hover:shadow-[12px_12px_0_#000] w-[300px] h-[300px] rounded-lg overflow-hidden"
-        >
-          <img
-            class="block w-full h-full object-cover"
-            src="https://swiperjs.com/demos/images/nature-6.jpg"
-            alt="Proyecto de naturaleza 6"
-          />
-        </swiper-slide>
-        <swiper-slide
-          class="bg-white border-[5px] border-black shadow-[8px_8px_0_#000] transition-transform duration-300 hover:-translate-x-[4px] hover:-translate-y-[4px] hover:shadow-[12px_12px_0_#000] w-[300px] h-[300px] rounded-lg overflow-hidden"
-        >
-          <img
-            class="block w-full h-full object-cover"
-            src="https://swiperjs.com/demos/images/nature-7.jpg"
-            alt="Proyecto de naturaleza 7"
-          />
-        </swiper-slide>
-        <swiper-slide
-          class="bg-white border-[5px] border-black shadow-[8px_8px_0_#000] transition-transform duration-300 hover:-translate-x-[4px] hover:-translate-y-[4px] hover:shadow-[12px_12px_0_#000] w-[300px] h-[300px] rounded-lg overflow-hidden"
-        >
-          <img
-            class="block w-full h-full object-cover"
-            src="https://swiperjs.com/demos/images/nature-8.jpg"
-            alt="Proyecto de naturaleza 8"
-          />
-        </swiper-slide>
-        <swiper-slide
-          class="bg-white border-[5px] border-black shadow-[8px_8px_0_#000] transition-transform duration-300 hover:-translate-x-[4px] hover:-translate-y-[4px] hover:shadow-[12px_12px_0_#000] w-[300px] h-[300px] rounded-lg overflow-hidden"
-        >
-          <img
-            class="block w-full h-full object-cover"
-            src="https://swiperjs.com/demos/images/nature-1.jpg"
-            alt="Proyecto de naturaleza 9"
-          />
-        </swiper-slide>
-      </swiper-container>
-    </ng-container>
+          Discover More
+          <span class="text-xl">➔</span>
+        </button>
+      </div>
+    </div>
   </main>
 
   <section
@@ -234,6 +178,30 @@
           class="w-40 h-40 md:w-56 md:h-56 bg-gradient-to-b from-gray-600 to-gray-400 rounded-full opacity-90 shadow-xl"
         ></div>
       </div>
+
+      <!-- Botón desde Uiverse -->
+      <button
+        class="absolute bottom-4 right-4 bg-[#2b2a2a] text-white font-medium text-[17px] px-4 py-[0.35em] pl-5 h-[2.8em] rounded-[0.9em] flex items-center overflow-hidden cursor-pointer shadow-[inset_0_0_1.6em_-0.6em_#714da6] group"
+      >
+        <span class="mr-10">This is us</span>
+        <div
+          class="absolute right-[0.3em] bg-white h-[2.2em] w-[2.2em] rounded-[0.7em] flex items-center justify-center transition-all duration-300 group-hover:w-[calc(100%-0.6em)] shadow-[0.1em_0.1em_0.6em_0.2em_#7b52b9] active:scale-95"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            class="w-[1.1em] transition-transform duration-300 text-[#7b52b9] group-hover:translate-x-[0.1em]"
+          >
+            <path fill="none" d="M0 0h24v24H0z"></path>
+            <path
+              fill="currentColor"
+              d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+            ></path>
+          </svg>
+        </div>
+      </button>
     </div>
   </section>
 
@@ -342,7 +310,7 @@
 
         <!-- Derechos de autor -->
         <div class="text-center md:text-right">
-          <p class="text-sm text-gray-700">
+          <p class="text-sm text-gray-700 font-serif">
             &copy; {{ getYear() }} <span class="font-semibold">Ruido</span>.
             Todos los derechos reservados.
           </p>

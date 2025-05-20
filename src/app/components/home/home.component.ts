@@ -10,6 +10,7 @@ import emailjs from 'emailjs-com';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+  mainImage: string = '../../../assets/article-cinematografia.jpg';
   isMouseDown = false;
   contactoForm!: FormGroup;
   selectedCard: any = null;
@@ -29,6 +30,13 @@ export class HomeComponent {
       message: ['', [Validators.required]],
     });
   }
+
+  gallery: string[] = [
+    '../../../assets/camara-antigua.jpg',
+    '../../../assets/cinema-pic.jpeg',
+    '../../../assets/productora-audiovisual-1024x488.jpg',
+    '../../../assets/article-cinematografia.jpg',
+  ];
 
   cards = [
     {
@@ -104,5 +112,9 @@ export class HomeComponent {
 
   getYear(): number {
     return new Date().getFullYear();
+  }
+
+  setMainImage(image: string) {
+    this.mainImage = image;
   }
 }

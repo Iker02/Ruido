@@ -2,9 +2,6 @@
   overflow-y: hidden;
 }
 
-:host {
-  font-family: 'Panchang', sans-serif;
-}
 
 
 .clip-hexagon {
