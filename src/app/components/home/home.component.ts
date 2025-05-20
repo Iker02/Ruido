@@ -32,10 +32,10 @@ export class HomeComponent {
   }
 
   gallery: string[] = [
-    '../../../assets/camara-antigua.jpg',
-    '../../../assets/cinema-pic.jpeg',
-    '../../../assets/productora-audiovisual-1024x488.jpg',
-    '../../../assets/article-cinematografia.jpg',
+    '../../../assets/pexels-abbas-mohammed-1990079-3680912.jpg',
+    '../../../assets/pexels-gochrisgoxyz-1643409.jpg',
+    '../../../assets/pexels-iriser-1379636.jpg',
+    '../../../assets/pexels-jplenio-1435075.jpg',
   ];
 
   cards = [
