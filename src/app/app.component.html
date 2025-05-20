@@ -20,7 +20,7 @@
         <img src="../assets/logo.png" alt="logo" />
       </div>
       <h2
-        class="text-lg tracking-[-0.015em] transition-colors duration-300 group-hover:text-black"
+        class="text-lg tracking-[-0.015em] font-bold transition-colors duration-300 group-hover:text-black"
         [ngClass]="{
           'text-black': isScrolled,
           'text-white': !isScrolled
@@ -32,7 +32,7 @@
     <div
       class="block lg:hidden xl:hidden bg-white absolute top-0 left-0 w-full text-black text-sm font-semibold mt-16 z-40"
     >
-      <om-marquee [direction]="'left'" [speed]="50" [pauseOnHover]="false">
+      <om-marquee [direction]="'right'" [speed]="50" [pauseOnHover]="false">
         <div #OmMarqueeContent>
           Bienvenido a Ruido — Descubre, aprende y desarrolla tus habilidades en
           programación sin límites.
