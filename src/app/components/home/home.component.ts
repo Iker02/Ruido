@@ -43,25 +43,25 @@ export class HomeComponent {
       title: 'Silent Signals',
       description:
         'A story told entirely through light and motion in a dystopian world. This animated short removing all dialogue, focusing instead on emotion and movement.',
-      image: '../../../assets/article-cinematografia.jpg',
+      image: '../../../assets/pexels-moible-1.jpg',
     },
     {
       title: 'Silent Signals',
       description:
         'A story told entirely through light and motion in a dystopian world. This animated short removing all dialogue, focusing instead on emotion and movement.',
-      image: '../../../assets/article-cinematografia.jpg',
+      image: '../../../assets/pexels-mobile-2.jpg',
     },
     {
       title: 'Silent Signals',
       description:
         'A story told entirely through light and motion in a dystopian world. This animated short removing all dialogue, focusing instead on emotion and movement.',
-      image: '../../../assets/article-cinematografia.jpg',
+      image: '../../../assets/pexels-mobile-3.jpg',
     },
     {
       title: 'Silent Signals',
       description:
         'A story told entirely through light and motion in a dystopian world. This animated short removing all dialogue, focusing instead on emotion and movement.',
-      image: '../../../assets/article-cinematografia.jpg',
+      image: '../../../assets/pexels-mobile-4.jpg',
     },
   ];
 
