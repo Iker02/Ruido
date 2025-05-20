@@ -15,7 +15,7 @@ import { ButtonModule } from 'primeng/button';
   standalone: false,
   styleUrl: './app.component.css',
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent  {
   title = 'ruido';
   isMenuOpen = false;
   isScrolled = false;
@@ -32,9 +32,6 @@ export class AppComponent implements AfterViewInit {
 
   ngOnInit(): void {
     this.spinner.show();
-  }
-
-  ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       window.addEventListener('load', () => {
         setTimeout(() => {
