@@ -96,7 +96,7 @@
   <main class="relative bg-transparent text-black text-sm m-0 p-0">
     <!-- signature-project.component.html -->
     <div
-      class="flex flex-col md:flex-row-reverse items-center justify-between p-6 md:p-16 gap-8"
+      class="flex flex-col md:flex-row-reverse items-center justify-between p-8 md:p-16 gap-8"
     >
       <!-- Text Side -->
       <div class="w-full md:w-1/2 text-center md:text-left z-30">
@@ -125,21 +125,30 @@
       </div>
 
       <!-- Image Side -->
-      <div
-        class="w-full md:w-1/2 relative rounded-3xl overflow-hidden shadow-lg"
-      >
+      <div class="w-full md:w-1/2 relative rounded-3xl overflow-visible">
         <img
           [src]="mainImage"
           alt="Main Project"
           class="w-full h-auto object-cover rounded-3xl"
         />
-        <!-- Button -->
-        <button
-          class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-2 rounded-full flex items-center gap-2 hover:bg-gray-800 transition"
+        <!-- Contenedor de botones -->
+        <div
+          class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 flex bg-[#d4c2a5] p-3 rounded-3xl font-sans text-[0.555rem] sm:text-sm sm:p-2 md:text-base lg:text-lg z-40"
         >
-          Discover More
-          <span class="text-xl">➔</span>
-        </button>
+          <!-- Botón de texto -->
+          <button
+            class="bg-black text-white px-6 py-2 rounded-2xl flex items-center gap-2 hover:bg-gray-800 transition"
+          >
+            Discover More
+          </button>
+
+          <!-- Botón de flecha -->
+          <button
+            class="bg-black text-white px-4 py-2 rounded-2xl flex items-center hover:bg-gray-800 transition"
+          >
+            ➔
+          </button>
+        </div>
       </div>
     </div>
   </main>
