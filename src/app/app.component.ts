@@ -15,7 +15,7 @@ import { ButtonModule } from 'primeng/button';
   standalone: false,
   styleUrl: './app.component.css',
 })
-export class AppComponent  {
+export class AppComponent {
   title = 'ruido';
   isMenuOpen = false;
   isScrolled = false;
@@ -32,11 +32,16 @@ export class AppComponent  {
 
   ngOnInit(): void {
     this.spinner.show();
+  }
+
+  ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       window.addEventListener('load', () => {
-        setTimeout(() => {
-          this.spinner.hide();
-        }, 500);
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            this.spinner.hide();
+          }, 500);
+        });
       });
     }
   }
