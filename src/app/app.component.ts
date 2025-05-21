@@ -4,10 +4,12 @@ import {
   Component,
   HostListener,
   Inject,
+  NgZone,
   PLATFORM_ID,
 } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ButtonModule } from 'primeng/button';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -26,22 +28,19 @@ export class AppComponent {
   numeroWhatsapp = '34644356186'; // Reemplazar con el número de fede
 
   constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
     private spinner: NgxSpinnerService,
-    @Inject(PLATFORM_ID) private platformId: Object
+    private ngZone: NgZone
   ) {}
 
   ngOnInit(): void {
     this.spinner.show();
-  }
 
-  ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-      window.addEventListener('load', () => {
-        requestAnimationFrame(() => {
-          setTimeout(() => {
-            this.spinner.hide();
-          }, 500);
-        });
+      this.ngZone.onStable.pipe(take(1)).subscribe(() => {
+        setTimeout(() => {
+          this.spinner.hide();
+        }, 300);
       });
     }
   }
