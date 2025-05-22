@@ -1,5 +1,13 @@
-import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  Inject,
+  PLATFORM_ID,
+  ViewChild,
+  ElementRef,
+} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { LeafletMapService } from '../../services/leaflet-map.service';
 
 @Component({
   selector: 'app-map',
@@ -8,20 +16,20 @@ import { isPlatformBrowser } from '@angular/common';
   templateUrl: './map.component.html',
 })
 export class MapComponent implements AfterViewInit {
+  @ViewChild('mapContainer', { static: false }) mapContainerRef!: ElementRef;
   private isBrowser: boolean;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private leafletMapService: LeafletMapService
+  ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
   async ngAfterViewInit() {
-    if (this.isBrowser) {
-      const L = await import('leaflet');
+    if (!this.isBrowser) return;
 
-      const map = L.map('map').setView([51.505, -0.09], 13);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors',
-      }).addTo(map);
-    }
+    const container = this.mapContainerRef.nativeElement;
+    await this.leafletMapService.initMap(container);
   }
 }
