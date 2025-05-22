@@ -1,6 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
 import {
-  AfterViewInit,
   Component,
   HostListener,
   Inject,
@@ -8,7 +7,6 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { ButtonModule } from 'primeng/button';
 import { take } from 'rxjs';
 
 @Component({
