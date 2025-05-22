@@ -1,5 +1,12 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Inject,
+  PLATFORM_ID,
+  ViewChild,
+} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import emailjs from 'emailjs-com';
 
@@ -9,7 +16,8 @@ import emailjs from 'emailjs-com';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit{
+  @ViewChild('carousel') carouselRef!: ElementRef;
   mainImage: string = '../../../assets/article-cinematografia.jpg';
   isMouseDown = false;
   contactoForm!: FormGroup;
@@ -34,6 +42,12 @@ export class HomeComponent {
 
     if (this.isBrowser) {
       this.startAutoHover();
+    }
+  }
+
+  ngAfterViewInit(): void {
+    if (this.isBrowser) {
+      this.carouselRef.nativeElement.scrollLeft = 0;
     }
   }
 
