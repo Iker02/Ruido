@@ -15,7 +15,7 @@ export class HomeComponent {
   contactoForm!: FormGroup;
   selectedCard: any = null;
   isBrowser = false;
-  activeIndex = -1;
+  activeIndex = 0;
   intervalId?: any;
 
   constructor(
