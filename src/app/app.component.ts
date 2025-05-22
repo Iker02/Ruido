@@ -40,7 +40,7 @@ export class AppComponent {
       this.ngZone.onStable.pipe(take(1)).subscribe(() => {
         setTimeout(() => {
           this.spinner.hide();
-        }, 300);
+        }, 1000);
       });
     }
   }

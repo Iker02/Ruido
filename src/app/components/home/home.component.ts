@@ -23,7 +23,7 @@ export class HomeComponent implements AfterViewInit{
   contactoForm!: FormGroup;
   selectedCard: any = null;
   isBrowser = false;
-  activeIndex = 0;
+  activeIndex = 1;
   intervalId?: any;
 
   constructor(
