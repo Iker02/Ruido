@@ -9,31 +9,32 @@ import { isPlatformBrowser } from '@angular/common';
 export class MapComponent implements AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-  async ngAfterViewInit(): Promise<void> {
+   async ngAfterViewInit(): Promise<void> {
     if (isPlatformBrowser(this.platformId)) {
-      const L = await import('leaflet');
+      const leaflet = await import('leaflet');
+      const { icon, marker, tileLayer, Map } = leaflet;
 
-      const map = L.map('map', {
+      const mapInstance = new Map('map', {
         center: [40.4168, -3.7038],
         zoom: 13,
         scrollWheelZoom: false,
         zoomControl: false,
       });
 
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution:
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      }).addTo(map);
+      }).addTo(mapInstance);
 
-      const customIcon = L.icon({
+      const customIcon = icon({
         iconUrl: '../../../assets/marcador-de-posicion.png',
         iconSize: [40, 40],
         iconAnchor: [20, 40],
         popupAnchor: [0, -40],
       });
 
-      L.marker([40.4168, -3.7038], { icon: customIcon })
-        .addTo(map)
+      marker([40.4168, -3.7038], { icon: customIcon })
+        .addTo(mapInstance)
         .bindPopup('📍 Aquí estamos nosotros')
         .openPopup();
 
@@ -42,8 +43,8 @@ export class MapComponent implements AfterViewInit {
       const zoomOutButton = document.getElementById('zoom-out');
 
       if (zoomInButton && zoomOutButton) {
-        zoomInButton.addEventListener('click', () => map.zoomIn());
-        zoomOutButton.addEventListener('click', () => map.zoomOut());
+        zoomInButton.addEventListener('click', () => mapInstance.zoomIn());
+        zoomOutButton.addEventListener('click', () => mapInstance.zoomOut());
       }
     }
   }
