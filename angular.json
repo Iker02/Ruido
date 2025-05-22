@@ -55,8 +55,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/ngx-spinner/animations/ball-clip-rotate.css",
-              "node_modules/maplibre-gl/dist/maplibre-gl.css"
+              "node_modules/ngx-spinner/animations/ball-clip-rotate.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -118,8 +117,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/ngx-spinner/animations/ball-clip-rotate.css",
-              "node_modules/maplibre-gl/dist/maplibre-gl.css"
+              "node_modules/ngx-spinner/animations/ball-clip-rotate.css"
             ],
             "scripts": []
           }
