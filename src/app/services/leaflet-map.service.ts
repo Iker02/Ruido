@@ -10,21 +10,26 @@ export class LeafletMapService {
 
     const map = new L.Map(container, {
       center: [40.4168, -3.7038],
-      zoom: 15,
+      zoom: 16,
+      scrollWheelZoom: false,    
+      doubleClickZoom: false,   
+      dragging: false,           
+      zoomControl: true         
     });
 
-    // 📍 Crear ícono personalizado
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '',
+    }).addTo(map);
+
     const customIcon = L.icon({
-      iconUrl: '../../assets/marcador-de-posicion.png',      
-      iconSize: [32, 40],                    
-      iconAnchor: [16, 40],                    
-      popupAnchor: [0, -40],               
+      iconUrl: 'assets/marcador-de-posicion.png', 
+      iconSize: [32, 32],
+      iconAnchor: [16, 32],
+      popupAnchor: [0, -32],
     });
 
-    // 📌 Coordenadas de Puerta del Sol
     const puertaDelSolCoords = [40.4169, -3.7036];
 
-    // 🧷 Añadir el marcador con el ícono personalizado
     L.marker(puertaDelSolCoords, { icon: customIcon })
       .addTo(map)
       .bindPopup('📍 Puerta del Sol, Madrid')
