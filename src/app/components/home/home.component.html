@@ -27,28 +27,30 @@
     </div>
   </div>
 
+<div
+  class="contenidoDeCartas flex overflow-x-auto no-scrollbar whitespace-nowrap snap-x snap-mandatory"
+  #carousel
+>
   <div
-    class="contenidoDeCartas flex overflow-x-auto no-scrollbar whitespace-nowrap snap-x snap-mandatory"
-    #carousel
+    class="card flex-shrink-0 snap-start w-[63.33%] sm:w-[63.33%] md:w-[45%] xl:w-[25%] z-20"
+    *ngFor="let card of cards; let i = index"
+    [class.active]="i === activeIndex"
   >
-    <div
-      class="card flex-shrink-0 snap-start w-[63.33%] sm:w-[63.33%] md:w-[45%] xl:w-[25%] z-20"
-      *ngFor="let card of cards"
-    >
-      <img [src]="card.image" class="w-full object-cover h-[400px]" />
-      <div class="card__content p-4">
-        <p class="card__title text-xl font-semibold">{{ card.title }}</p>
-        <p class="card__description text-sm text-gray-600">
-          {{ card.description }}
-        </p>
-        <button
-          class="fixed bottom-4 right-4 bg-[#d4c2a5] border-[3px] border-black shadow-[4px_4px_0_#000] transition-transform duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0_#000] px-4 py-2 rounded-full text-base font-semibold self-start"
-        >
-          Watch now
-        </button>
-      </div>
+    <img [src]="card.image" class="w-full object-cover h-[400px]" />
+    <div class="card__content p-4">
+      <p class="card__title text-xl font-semibold">{{ card.title }}</p>
+      <p class="card__description text-sm text-gray-600">
+        {{ card.description }}
+      </p>
+      <button
+        class="fixed bottom-4 right-4 bg-[#d4c2a5] border-[3px] border-black shadow-[4px_4px_0_#000] transition-transform duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0_#000] px-4 py-2 rounded-full text-base font-semibold self-start"
+      >
+        Watch now
+      </button>
     </div>
   </div>
+</div>
+
 
   <section class="z-30 relative bg-black overflow-hidden">
     <om-marquee

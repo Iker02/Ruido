@@ -106,7 +106,14 @@
 
 .card:hover .card__content {
   transform: rotateX(0deg);
+  transition: transform 0.3s ease;
 }
+
+.card.active .card__content {
+  transform: rotateX(0deg);
+  transition: transform 0.3s ease;
+}
+
 
 .card__title {
   margin: 0;
@@ -218,3 +225,4 @@
 .instagram:hover svg {
   fill: #c13584;
 }
+

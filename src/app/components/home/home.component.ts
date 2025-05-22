@@ -15,6 +15,8 @@ export class HomeComponent {
   contactoForm!: FormGroup;
   selectedCard: any = null;
   isBrowser = false;
+  activeIndex = -1;
+  intervalId?: any;
 
   constructor(
     private fb: FormBuilder,
@@ -29,6 +31,10 @@ export class HomeComponent {
       user_email: ['', [Validators.required, Validators.email]],
       message: ['', [Validators.required]],
     });
+
+    if (this.isBrowser) {
+      this.startAutoHover();
+    }
   }
 
   gallery: string[] = [
@@ -116,5 +122,17 @@ export class HomeComponent {
 
   setMainImage(image: string) {
     this.mainImage = image;
+  }
+
+  ngOnDestroy(): void {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
+  }
+
+  startAutoHover(): void {
+    this.intervalId = setInterval(() => {
+      this.activeIndex = (this.activeIndex + 1) % this.cards.length;
+    }, 5000);
   }
 }
