@@ -15,7 +15,6 @@ import { NgxMarqueeComponent } from '@omnedia/ngx-marquee';
 import { RouterModule } from '@angular/router';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { AboutUsCardComponent } from './components/about-us-card/about-us-card.component';
-import { MapComponent } from './components/map/map.component';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, ErrorComponent],
@@ -29,7 +28,6 @@ import { MapComponent } from './components/map/map.component';
     NgxSpinnerModule,
     BrowserAnimationsModule,
     AboutUsCardComponent,
-    MapComponent,
   ],
   providers: [provideClientHydration(withEventReplay())],
   bootstrap: [AppComponent],
