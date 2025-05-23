@@ -17,9 +17,11 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { AboutUsCardComponent } from './components/about-us-card/about-us-card.component';
 import { MapComponent } from './components/map/map.component';
 import { TeamComponent } from './components/team/team.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ErrorComponent],
+  declarations: [AppComponent, HomeComponent, ErrorComponent, ProjectsComponent, AboutUsComponent],
   imports: [
     FormsModule,
     NgxMarqueeComponent,

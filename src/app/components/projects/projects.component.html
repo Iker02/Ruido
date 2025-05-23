@@ -1,0 +1,48 @@
+<div class="relative w-full min-h-screen overflow-hidden flex items-center justify-center">
+  <!-- Fondo desenfocado -->
+  <div
+    class="absolute inset-0 bg-center bg-cover blur-xl scale-105"
+    [ngStyle]="{
+      'background-image': 'url(../../../../../assets/productora-audiovisual-1024x488.jpg)'
+    }"
+  ></div>
+
+  <!-- Contenedor principal -->
+  <div
+    class="relative z-10 max-w-7xl mx-auto p-6 sm:p-12 bg-neutral-100 bg-opacity-90 backdrop-blur-md rounded-xl"
+  >
+    <!-- Encabezado -->
+    <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-12 gap-4 mb-6 text-xs sm:text-sm">
+      <div class="col-span-2"> (Projects) </div>
+      <div class="col-span-6 md:col-span-8">
+        <p>
+          Our Projects Bring Stories to Life. Each project at Reelity is a
+          blend of imagination and craft, pushing creative boundaries to
+          deliver unforgettable visual experiences. From concept to final cut,
+          explore the work that defines us.
+        </p>
+      </div>
+    </div>
+
+    <!-- Imagen destacada y detalles -->
+    <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-12 gap-4 items-start">
+      <div class="col-span-2 text-xs sm:text-sm">(01)</div>
+      <div class="col-span-6 md:col-span-8 text-center relative">
+        <img
+          src="../../../../../assets/productora-audiovisual-1024x488.jpg"
+          alt="Project Image"
+          class="w-full h-auto rounded shadow-md"
+        />
+        <button
+          class="absolute bottom-4 left-4 text-white text-xs bg-black/60 px-3 py-1 rounded hover:bg-black"
+        >
+          ▶ PLAY VIDEO
+        </button>
+      </div>
+      <div class="col-span-2 flex flex-col justify-between text-xs sm:text-sm text-right">
+        <div>scroll ↓</div>
+        <div>(2024)</div>
+      </div>
+    </div>
+  </div>
+</div>

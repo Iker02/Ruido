@@ -59,9 +59,9 @@
           </h2>
 
           <!-- Navegación -->
-          <nav class="flex flex-col space-y-4 text-base font-serif">
+          <nav class="flex flex-col space-y-4 text-base font-serif" (click)="toggleMenu()">
             <a
-              href="#"
+              [routerLink]="'/projects'"
               [ngClass]="{
                 'text-black': isScrolled,
                 'text-gray-800': !isScrolled
@@ -70,7 +70,7 @@
               Proyectos
             </a>
             <a
-              href="#"
+              [routerLink]="'/about-us'"
               [ngClass]="{
                 'text-black': isScrolled,
                 'text-gray-800': !isScrolled
@@ -114,14 +114,15 @@
         <a
           class="text-sm font-serif leading-normal transition-colors duration-300 group-hover:text-black"
           [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
-          href="#"
+          [routerLink]="'/projects'"
         >
           Proyectos
         </a>
+
         <a
           class="text-sm font-serif leading-normal transition-colors duration-300 group-hover:text-black"
           [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
-          href="#"
+          [routerLink]="'/about-us'"
           >Sobre nosotros</a
         >
         <a
