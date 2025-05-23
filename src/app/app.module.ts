@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { AboutUsCardComponent } from './components/about-us-card/about-us-card.component';
 import { MapComponent } from './components/map/map.component';
+import { TeamComponent } from './components/team/team.component';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, ErrorComponent],
@@ -30,6 +31,7 @@ import { MapComponent } from './components/map/map.component';
     BrowserAnimationsModule,
     AboutUsCardComponent,
     MapComponent,
+    TeamComponent,
   ],
   providers: [provideClientHydration(withEventReplay())],
   bootstrap: [AppComponent],

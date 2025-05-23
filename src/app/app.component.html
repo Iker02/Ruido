@@ -52,7 +52,9 @@
       <div class="p-6 flex flex-col justify-between h-full">
         <!-- Encabezado -->
         <div>
-          <h2 class="text-xl font-bold mb-6 font-serif tracking-wide text-gray-800">
+          <h2
+            class="text-xl font-bold mb-6 font-serif tracking-wide text-gray-800"
+          >
             Menú
           </h2>
 
@@ -83,13 +85,24 @@
                 'text-gray-800': !isScrolled
               }"
             >
+              Servicios
+            </a>
+            <a
+              href="#"
+              [ngClass]="{
+                'text-black': isScrolled,
+                'text-gray-800': !isScrolled
+              }"
+            >
               Contacto
             </a>
           </nav>
         </div>
 
         <!-- Footer del menú -->
-        <div class="text-sm text-gray-500 border-t border-gray-200 pt-4 font-sans">
+        <div
+          class="text-sm text-gray-500 border-t border-gray-200 pt-4 font-sans"
+        >
           &copy; {{ getYear() }} Ruido
         </div>
       </div>
@@ -110,6 +123,12 @@
           [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
           href="#"
           >Sobre nosotros</a
+        >
+        <a
+          class="text-sm font-serif leading-normal transition-colors duration-300 group-hover:text-black"
+          [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
+          href="#"
+          >Servicios</a
         >
         <a
           class="text-sm font-serif leading-normal transition-colors duration-300 group-hover:text-black"
