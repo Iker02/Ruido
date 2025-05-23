@@ -13,7 +13,7 @@ import { take } from 'rxjs';
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: false,
-  styleUrl: './app.component.css',
+  styleUrls: ['./app.component.css'], 
 })
 export class AppComponent {
   title = 'ruido';
@@ -59,11 +59,8 @@ export class AppComponent {
       return;
     }
 
-    // Si el menú está abierto
     if (this.isMenuOpen) {
       const clickedInsideMenu = target.closest('#sidebar-menu');
-
-      // Si NO se hizo clic dentro del menú
       if (!clickedInsideMenu) {
         this.isMenuOpen = false;
       }

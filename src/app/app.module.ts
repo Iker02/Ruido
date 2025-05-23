@@ -19,9 +19,10 @@ import { MapComponent } from './components/map/map.component';
 import { TeamComponent } from './components/team/team.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ServiciosComponent } from './components/servicios/servicios.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ErrorComponent, ProjectsComponent, AboutUsComponent],
+  declarations: [AppComponent, HomeComponent, ErrorComponent, ProjectsComponent, AboutUsComponent, ServiciosComponent],
   imports: [
     FormsModule,
     NgxMarqueeComponent,

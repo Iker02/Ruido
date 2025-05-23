@@ -20,7 +20,8 @@
         <img src="../assets/logo.png" alt="logo" />
       </div>
       <h2
-        class="text-lg tracking-[-0.015em] font-bold transition-colors duration-300 group-hover:text-black"
+        class="text-lg tracking-[-0.015em] font-bold transition-colors duration-300 group-hover:text-black cursor-pointer"
+        [routerLink]="'/'"
         [ngClass]="{
           'text-black': isScrolled,
           'text-white': !isScrolled
@@ -59,7 +60,10 @@
           </h2>
 
           <!-- Navegación -->
-          <nav class="flex flex-col space-y-4 text-base font-serif" (click)="toggleMenu()">
+          <nav
+            class="flex flex-col space-y-4 text-base font-serif"
+            (click)="toggleMenu()"
+          >
             <a
               [routerLink]="'/projects'"
               [ngClass]="{
@@ -79,7 +83,7 @@
               Sobre Nosotros
             </a>
             <a
-              href="#"
+              [routerLink]="'/services'"
               [ngClass]="{
                 'text-black': isScrolled,
                 'text-gray-800': !isScrolled
@@ -88,7 +92,7 @@
               Servicios
             </a>
             <a
-              href="#"
+              [routerLink]="'/'"
               [ngClass]="{
                 'text-black': isScrolled,
                 'text-gray-800': !isScrolled
@@ -128,13 +132,13 @@
         <a
           class="text-sm font-serif leading-normal transition-colors duration-300 group-hover:text-black"
           [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
-          href="#"
+          [routerLink]="'/services'"
           >Servicios</a
         >
         <a
           class="text-sm font-serif leading-normal transition-colors duration-300 group-hover:text-black"
           [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
-          href="#"
+          [routerLink]="'/'"
           >Contacto</a
         >
       </div>

@@ -4,11 +4,13 @@ import { HomeComponent } from './components/home/home.component';
 import { ErrorComponent } from './components/error/error.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ServiciosComponent } from './components/servicios/servicios.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'about-us', component: AboutUsComponent },
+  { path: 'services', component: ServiciosComponent },
   { path: '**', component: ErrorComponent },
 ];
 
