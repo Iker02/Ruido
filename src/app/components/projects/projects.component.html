@@ -1,47 +1,54 @@
-<div class="relative w-full min-h-screen overflow-hidden flex items-center justify-center">
-  <!-- Fondo desenfocado -->
+<div class="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-black">
+  <!-- Fondo con desenfoque -->
   <div
-    class="absolute inset-0 bg-center bg-cover blur-xl scale-105"
+    class="absolute inset-0 bg-cover bg-center blur-xl brightness-75 scale-110"
     [ngStyle]="{
       'background-image': 'url(../../../../../assets/productora-audiovisual-1024x488.jpg)'
     }"
   ></div>
 
-  <!-- Contenedor principal -->
+  <!-- Contenido principal -->
   <div
-    class="relative z-10 max-w-7xl mx-auto p-6 sm:p-12 bg-neutral-100 bg-opacity-90 backdrop-blur-md rounded-xl"
+    class="relative z-10 max-w-6xl w-full mx-6 sm:mx-12 px-6 py-10 sm:py-16 bg-neutral-100 bg-opacity-90 backdrop-blur-md rounded-3xl shadow-2xl"
   >
-    <!-- Encabezado -->
-    <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-12 gap-4 mb-6 text-xs sm:text-sm">
-      <div class="col-span-2"> (Projects) </div>
-      <div class="col-span-6 md:col-span-8">
-        <p>
-          Our Projects Bring Stories to Life. Each project at Reelity is a
-          blend of imagination and craft, pushing creative boundaries to
-          deliver unforgettable visual experiences. From concept to final cut,
-          explore the work that defines us.
-        </p>
-      </div>
+    <!-- Título -->
+    <div class="mb-10">
+      <h2 class="text-2xl sm:text-3xl font-bold text-black mb-2 tracking-tight">
+        Our Projects Bring Stories to Life
+      </h2>
+      <p class="text-sm sm:text-base text-gray-800 max-w-3xl">
+        Each project at Reelity is a blend of imagination and craft, pushing creative boundaries to deliver unforgettable visual experiences. From concept to final cut, explore the work that defines us.
+      </p>
     </div>
 
-    <!-- Imagen destacada y detalles -->
-    <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-12 gap-4 items-start">
-      <div class="col-span-2 text-xs sm:text-sm">(01)</div>
-      <div class="col-span-6 md:col-span-8 text-center relative">
-        <img
-          src="../../../../../assets/productora-audiovisual-1024x488.jpg"
-          alt="Project Image"
-          class="w-full h-auto rounded shadow-md"
-        />
+    <!-- Contenido dividido -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+      <!-- Lado izquierdo -->
+      <div class="md:col-span-2 text-black text-sm font-medium">
+        <div class="mb-2">(01)</div>
+        <div class="hidden sm:block">(Projects)</div>
+      </div>
+
+      <!-- Imagen -->
+      <div class="md:col-span-8 relative">
+        <div class="overflow-hidden rounded-xl shadow-lg">
+          <img
+            src="../../../../../assets/productora-audiovisual-1024x488.jpg"
+            alt="Project Image"
+            class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
+          />
+        </div>
         <button
-          class="absolute bottom-4 left-4 text-white text-xs bg-black/60 px-3 py-1 rounded hover:bg-black"
+          class="absolute bottom-4 left-4 bg-black/70 text-white text-xs sm:text-sm px-4 py-1.5 rounded-full hover:bg-black transition"
         >
           ▶ PLAY VIDEO
         </button>
       </div>
-      <div class="col-span-2 flex flex-col justify-between text-xs sm:text-sm text-right">
-        <div>scroll ↓</div>
-        <div>(2024)</div>
+
+      <!-- Lado derecho -->
+      <div class="md:col-span-2 text-right text-sm text-black flex flex-col justify-between h-full">
+        <span class="mb-2">scroll ↓</span>
+        <span class="hidden sm:block">(2024)</span>
       </div>
     </div>
   </div>
