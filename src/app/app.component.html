@@ -136,11 +136,13 @@
           >Servicios</a
         >
         <a
-          class="text-sm font-serif leading-normal transition-colors duration-300 group-hover:text-black"
+          class="text-sm font-serif leading-normal transition-colors duration-300 group-hover:text-black cursor-pointer"
           [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
-          [routerLink]="'/'"
-          >Contacto</a
+          [routerLink]="['/']"
+          [fragment]="'formulario'"
         >
+          Contacto
+        </a>
       </div>
       <div
         class="bg-white absolute top-0 left-0 w-full text-black text-sm font-semibold mt-12 z-40"

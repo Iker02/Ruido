@@ -6,6 +6,7 @@ import {
   NgZone,
   PLATFORM_ID,
 } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { take } from 'rxjs';
 
@@ -13,7 +14,7 @@ import { take } from 'rxjs';
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: false,
-  styleUrls: ['./app.component.css'], 
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'ruido';
@@ -28,7 +29,8 @@ export class AppComponent {
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private spinner: NgxSpinnerService,
-    private ngZone: NgZone
+    private ngZone: NgZone,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -41,6 +43,21 @@ export class AppComponent {
         }, 1000);
       });
     }
+  }
+
+  ngAfterViewInit(): void {
+    this.route.fragment.subscribe((fragment) => {
+      if (fragment) {
+        this.ngZone.runOutsideAngular(() => {
+          requestAnimationFrame(() => {
+            const el = document.getElementById(fragment);
+            if (el) {
+              el.scrollIntoView({ behavior: 'smooth' });
+            }
+          });
+        });
+      }
+    });
   }
 
   toggleMenu() {
@@ -80,5 +97,12 @@ export class AppComponent {
 
   getYear(): number {
     return new Date().getFullYear();
+  }
+
+  navigateToContact() {
+    const contactSection = document.getElementById('formulario');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }
