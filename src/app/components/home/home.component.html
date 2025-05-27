@@ -6,6 +6,16 @@
     <div
       class="fixed inset-0 bg-[#d4c2a5] bg-cover bg-center z-0 w-100vw"
     ></div>
+    <div
+      class="block lg:mt-14 bg-white absolute top-0 left-0 w-full text-black text-sm font-semibold mt-20 z-40"
+    >
+      <om-marquee [direction]="'right'" [speed]="50" [pauseOnHover]="false">
+        <div #OmMarqueeContent>
+          Bienvenido a Ruido — Descubre, aprende y desarrolla tus habilidades en
+          programación sin límites.
+        </div>
+      </om-marquee>
+    </div>
 
     <div class="relative">
       <!-- Título encima del video -->
@@ -271,9 +281,7 @@
       id="formulario"
     >
       <!-- Fondo con opacidad -->
-      <div
-        class="absolute inset-0 bg-opacity-40 bg-gray-100 z-0"
-      ></div>
+      <div class="absolute inset-0 bg-opacity-40 bg-gray-100 z-0"></div>
 
       <!-- Contenido del formulario -->
       <form

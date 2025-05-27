@@ -1,19 +1,47 @@
 <div class="min-h-screen bg-white text-gray-900 font-sans">
-
   <!-- Hero -->
-  <section class="w-full bg-gradient-to-br from-black via-gray-900 to-black text-white py-24 px-6 text-center pt-44">
-    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Nuestros Servicios</h1>
-    <p class="text-lg md:text-xl font-light max-w-2xl mx-auto">Transformamos ideas en experiencias audiovisuales inolvidables.</p>
+  <section
+    class="w-full bg-gradient-to-br from-black via-gray-900 to-black text-white h-[70vh] px-6 text-center flex flex-col items-center justify-center"
+  >
+    <div class="OmMarqueeContent absolute inset-0 z-10 h-auto">
+      <om-marquee
+        class="w-full h-auto"
+        [direction]="'right'"
+        [pauseOnHover]="false"
+        [animationDuration]="'8000ms'"
+      >
+        <div
+          #OmMarqueeContent
+          class="w-full h-[20%] flex items-center whitespace-nowrap text-[115vw] md:text-[35vw] md:h-[30%] sm:h-[20%] sm:text-[80vh] leading-none font-extrabold text-transparent"
+          style="-webkit-text-stroke: 2px white"
+        >
+          RUIDO-
+        </div>
+      </om-marquee>
+    </div>
+
+    <div class="relative">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-4 z-30 relative">
+        Nuestros Servicios
+      </h1>
+    </div>
   </section>
 
   <!-- Servicios -->
   <section class="py-20 px-6 md:px-20 bg-gray-50">
     <div class="grid md:grid-cols-2 gap-16 items-start">
-      
       <!-- Producción -->
-      <div class="group bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
-        <h2 class="text-2xl font-bold mb-4 text-black group-hover:text-indigo-600 transition">🎬 Producción</h2>
-        <ul class="space-y-2 text-gray-600 text-sm leading-relaxed list-disc list-inside">
+      <div
+        class="group bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition"
+      >
+        <h2
+          class="text-2xl font-bold mb-4 text-black group-hover:text-indigo-600 transition"
+        >
+          🎬 Producción
+        </h2>
+        <ul
+          class="space-y-2 text-gray-600 text-sm leading-relaxed list-disc list-inside"
+        >
           <li>Rodajes de publicidad y videoclips</li>
           <li>Producción de contenido para redes</li>
           <li>Dirección creativa y de arte</li>
@@ -22,9 +50,17 @@
       </div>
 
       <!-- Postproducción -->
-      <div class="group bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
-        <h2 class="text-2xl font-bold mb-4 text-black group-hover:text-indigo-600 transition">✂️ Postproducción</h2>
-        <ul class="space-y-2 text-gray-600 text-sm leading-relaxed list-disc list-inside">
+      <div
+        class="group bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition"
+      >
+        <h2
+          class="text-2xl font-bold mb-4 text-black group-hover:text-indigo-600 transition"
+        >
+          ✂️ Postproducción
+        </h2>
+        <ul
+          class="space-y-2 text-gray-600 text-sm leading-relaxed list-disc list-inside"
+        >
           <li>Montaje y edición profesional</li>
           <li>Corrección de color cinematográfica</li>
           <li>Sonorización y mezcla</li>
@@ -33,9 +69,17 @@
       </div>
 
       <!-- Motion Graphics -->
-      <div class="group bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
-        <h2 class="text-2xl font-bold mb-4 text-black group-hover:text-indigo-600 transition">🌀 Motion Graphics</h2>
-        <ul class="space-y-2 text-gray-600 text-sm leading-relaxed list-disc list-inside">
+      <div
+        class="group bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition"
+      >
+        <h2
+          class="text-2xl font-bold mb-4 text-black group-hover:text-indigo-600 transition"
+        >
+          🌀 Motion Graphics
+        </h2>
+        <ul
+          class="space-y-2 text-gray-600 text-sm leading-relaxed list-disc list-inside"
+        >
           <li>Animación 2D/3D para branding</li>
           <li>Transiciones dinámicas y lower thirds</li>
           <li>Intro/outros para contenido</li>
@@ -44,9 +88,17 @@
       </div>
 
       <!-- Branding Sonoro -->
-      <div class="group bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
-        <h2 class="text-2xl font-bold mb-4 text-black group-hover:text-indigo-600 transition">🎧 Branding Sonoro</h2>
-        <ul class="space-y-2 text-gray-600 text-sm leading-relaxed list-disc list-inside">
+      <div
+        class="group bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition"
+      >
+        <h2
+          class="text-2xl font-bold mb-4 text-black group-hover:text-indigo-600 transition"
+        >
+          🎧 Branding Sonoro
+        </h2>
+        <ul
+          class="space-y-2 text-gray-600 text-sm leading-relaxed list-disc list-inside"
+        >
           <li>Identidad auditiva para marcas</li>
           <li>Diseño de efectos sonoros</li>
           <li>Música original para proyectos</li>
@@ -55,26 +107,39 @@
       </div>
 
       <!-- Consultoría Creativa -->
-      <div class="group bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition md:col-span-2">
-        <h2 class="text-2xl font-bold mb-4 text-black group-hover:text-indigo-600 transition">💡 Consultoría Creativa</h2>
-        <ul class="space-y-2 text-gray-600 text-sm leading-relaxed list-disc list-inside">
+      <div
+        class="group bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition md:col-span-2"
+      >
+        <h2
+          class="text-2xl font-bold mb-4 text-black group-hover:text-indigo-600 transition"
+        >
+          💡 Consultoría Creativa
+        </h2>
+        <ul
+          class="space-y-2 text-gray-600 text-sm leading-relaxed list-disc list-inside"
+        >
           <li>Asesoría en narrativa visual</li>
           <li>Conceptualización de campañas audiovisuales</li>
           <li>Optimización de ideas según público objetivo</li>
         </ul>
       </div>
-
     </div>
   </section>
 
   <!-- CTA final -->
   <section class="bg-black text-white text-center py-20 px-6">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Listo para crear algo increíble?</h2>
-    <p class="text-lg font-light mb-6">Hablemos y hagamos que tu marca suene, se vea y se sienta única.</p>
-    <a class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-6 rounded-xl transition"
-                  [routerLink]="['/']"
-                  [fragment]="'formulario'">
-          Contáctanos
-        </a>
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+      ¿Listo para crear algo increíble?
+    </h2>
+    <p class="text-lg font-light mb-6">
+      Hablemos y hagamos que tu marca suene, se vea y se sienta única.
+    </p>
+    <a
+      class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-6 rounded-xl transition"
+      [routerLink]="['/']"
+      [fragment]="'formulario'"
+    >
+      Contáctanos
+    </a>
   </section>
 </div>

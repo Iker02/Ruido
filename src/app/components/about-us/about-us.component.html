@@ -1,101 +1,87 @@
-<div class="min-h-screen bg-gray-50 text-gray-800">
+<div class="min-h-screen bg-gradient-to-b from-white to-gray-100 text-gray-800">
+
   <!-- Hero -->
-  <section
-    class="relative w-full h-[60vh] bg-cover flex items-center justify-center text-white px-4"
-    [ngStyle]="{
-      'background-image':
-        'url(../../../../../assets/pexels-rickyrecap-2627063.jpg)'
-    }"
-  >
-    <div class="absolute inset-0 bg-black/50 backdrop-blur-xl"></div>
-    <div class="relative text-center max-w-2xl">
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Sobre Nosotros</h1>
-      <p class="text-lg md:text-xl font-light">
-        Contamos historias que suenan fuerte. Creatividad audiovisual con sello
-        Ruido.
-      </p>
+  <section class="w-full bg-gradient-to-br from-black via-gray-900 to-black text-white py-32 px-6 text-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-felt.png')] bg-repeat"></div>
+    <h1 class="relative text-5xl md:text-6xl font-extrabold mb-6 leading-tight">Nuestros Servicios</h1>
+    <p class="relative text-xl md:text-2xl font-light max-w-3xl mx-auto">Transformamos ideas en experiencias audiovisuales inolvidables.</p>
+  </section>
+
+  <!-- Servicios -->
+  <section class="py-24 px-6 md:px-20">
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+
+      <!-- Tarjeta de servicio -->
+      <div class="group bg-white p-10 rounded-3xl shadow-xl hover:shadow-2xl border border-gray-200 transition-all">
+        <div class="text-4xl mb-4">🎬</div>
+        <h2 class="text-2xl font-semibold mb-3 group-hover:text-indigo-600 transition">Producción</h2>
+        <ul class="text-gray-600 text-base leading-relaxed space-y-2">
+          <li>• Rodajes de publicidad y videoclips</li>
+          <li>• Producción de contenido para redes</li>
+          <li>• Dirección creativa y de arte</li>
+          <li>• Gestión de locaciones y casting</li>
+        </ul>
+      </div>
+
+      <div class="group bg-white p-10 rounded-3xl shadow-xl hover:shadow-2xl border border-gray-200 transition-all">
+        <div class="text-4xl mb-4">✂️</div>
+        <h2 class="text-2xl font-semibold mb-3 group-hover:text-indigo-600 transition">Postproducción</h2>
+        <ul class="text-gray-600 text-base leading-relaxed space-y-2">
+          <li>• Montaje y edición profesional</li>
+          <li>• Corrección de color cinematográfica</li>
+          <li>• Sonorización y mezcla</li>
+          <li>• Subtitulados y formatos para entrega</li>
+        </ul>
+      </div>
+
+      <div class="group bg-white p-10 rounded-3xl shadow-xl hover:shadow-2xl border border-gray-200 transition-all">
+        <div class="text-4xl mb-4">🌀</div>
+        <h2 class="text-2xl font-semibold mb-3 group-hover:text-indigo-600 transition">Motion Graphics</h2>
+        <ul class="text-gray-600 text-base leading-relaxed space-y-2">
+          <li>• Animación 2D/3D para branding</li>
+          <li>• Transiciones dinámicas y lower thirds</li>
+          <li>• Intro/outros para contenido</li>
+          <li>• Edición sincronizada con música</li>
+        </ul>
+      </div>
+
+      <div class="group bg-white p-10 rounded-3xl shadow-xl hover:shadow-2xl border border-gray-200 transition-all">
+        <div class="text-4xl mb-4">🎧</div>
+        <h2 class="text-2xl font-semibold mb-3 group-hover:text-indigo-600 transition">Branding Sonoro</h2>
+        <ul class="text-gray-600 text-base leading-relaxed space-y-2">
+          <li>• Identidad auditiva para marcas</li>
+          <li>• Diseño de efectos sonoros</li>
+          <li>• Música original para proyectos</li>
+          <li>• Producción de jingles y podcasts</li>
+        </ul>
+      </div>
+
+      <div class="group bg-white p-10 rounded-3xl shadow-xl hover:shadow-2xl border border-gray-200 transition-all md:col-span-2">
+        <div class="text-4xl mb-4">💡</div>
+        <h2 class="text-2xl font-semibold mb-3 group-hover:text-indigo-600 transition">Consultoría Creativa</h2>
+        <ul class="text-gray-600 text-base leading-relaxed space-y-2">
+          <li>• Asesoría en narrativa visual</li>
+          <li>• Conceptualización de campañas audiovisuales</li>
+          <li>• Optimización de ideas según público objetivo</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- Misión y visión -->
-  <section
-    class="py-16 px-6 md:px-20 grid md:grid-cols-2 gap-10 items-center bg-white"
-  >
-    <div>
-      <h2 class="text-3xl font-bold mb-4">Nuestra Misión</h2>
-      <p class="text-gray-600 leading-relaxed">
-        Empoderar a las personas a través de soluciones digitales innovadoras
-        que transforman la manera en que viven, trabajan y se conectan.
-      </p>
-    </div>
-    <div>
-      <h2 class="text-3xl font-bold mb-4">Nuestra Visión</h2>
-      <p class="text-gray-600 leading-relaxed">
-        Ser líderes globales en desarrollo tecnológico, marcando el estándar en
-        diseño, funcionalidad y sostenibilidad.
-      </p>
+  <!-- CTA final -->
+  <section class="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white text-center py-24 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')] bg-repeat"></div>
+    <div class="relative z-10">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">¿Listo para crear algo increíble?</h2>
+      <p class="text-lg font-light mb-8 max-w-xl mx-auto">Hablemos y hagamos que tu marca suene, se vea y se sienta única.</p>
+      <a
+        class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-8 rounded-xl transition"
+        [routerLink]="['/']"
+        [fragment]="'formulario'"
+      >
+        Contáctanos
+      </a>
     </div>
   </section>
 
-  <!-- Valores -->
-  <section class="bg-gray-100 py-20 px-6 md:px-20">
-    <h2 class="text-center text-3xl font-bold mb-12">Nuestros Valores</h2>
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-center">
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">Innovación</h3>
-        <p class="text-gray-600 text-sm">
-          Siempre un paso adelante con ideas frescas.
-        </p>
-      </div>
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">Transparencia</h3>
-        <p class="text-gray-600 text-sm">
-          Confianza a través de la honestidad.
-        </p>
-      </div>
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">Compromiso</h3>
-        <p class="text-gray-600 text-sm">Dedicación total a cada proyecto.</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">Colaboración</h3>
-        <p class="text-gray-600 text-sm">El éxito se logra juntos.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Equipo -->
-  <section class="py-20 px-6 md:px-20 bg-white">
-    <h2 class="text-center text-3xl font-bold mb-12">Nuestro Equipo</h2>
-    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 text-center">
-      <!-- Puedes duplicar este bloque para más miembros -->
-      <div class="flex flex-col items-center">
-        <img
-          src="https://i.pravatar.cc/150?img=32"
-          alt="Persona"
-          class="w-24 h-24 rounded-full shadow-md mb-4"
-        />
-        <h3 class="text-xl font-semibold">German Gómez</h3>
-        <p class="text-sm text-gray-500">CEO</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <img
-          src="https://i.pravatar.cc/150?img=45"
-          alt="Persona"
-          class="w-24 h-24 rounded-full shadow-md mb-4"
-        />
-        <h3 class="text-xl font-semibold">Fede Valderde</h3>
-        <p class="text-sm text-gray-500">CEO</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <img
-          src="https://i.pravatar.cc/150?img=5"
-          alt="Persona"
-          class="w-24 h-24 rounded-full shadow-md mb-4"
-        />
-        <h3 class="text-xl font-semibold">Iker Madariaga</h3>
-        <p class="text-sm text-gray-500">Desarrollador</p>
-      </div>
-    </div>
-  </section>
 </div>
