@@ -103,8 +103,8 @@
       </div>
     </div>
 
-    <!-- Navegación y avatar (solo en pantallas medianas o más) -->
-    <div class="hidden md:flex flex-1 justify-end gap-8">
+    <!-- Navegación y avatar (solo en pantallas xl o más grandes) -->
+    <div class="hidden xl:flex flex-1 justify-end gap-8">
       <div class="flex items-center gap-9">
         <a
           class="text-sm font-serif leading-normal transition-colors duration-300 group-hover:text-black"
@@ -118,14 +118,18 @@
           class="text-sm font-serif leading-normal transition-colors duration-300 group-hover:text-black"
           [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
           [routerLink]="'/about-us'"
-          >Sobre nosotros</a
         >
+          Sobre nosotros
+        </a>
+
         <a
           class="text-sm font-serif leading-normal transition-colors duration-300 group-hover:text-black"
           [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
           [routerLink]="'/services'"
-          >Servicios</a
         >
+          Servicios
+        </a>
+
         <a
           class="text-sm font-serif leading-normal transition-colors duration-300 group-hover:text-black cursor-pointer"
           [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
@@ -141,8 +145,8 @@
     <button
       id="menu-toggle-btn"
       (click)="toggleMenu()"
-      class="md:hidden flex items-center justify-center p-2 rounded-lg transition-all duration-150 ease-in-out active:scale-90 active:rotate-180"
-      [ngClass]="{ 'text-black': isScrolled, 'text-gray-950': !isScrolled }"
+      class="xl:hidden flex items-center justify-center p-2 rounded-lg transition-all duration-150 ease-in-out active:scale-90 active:rotate-180"
+      [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
