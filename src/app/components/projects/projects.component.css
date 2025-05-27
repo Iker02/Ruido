@@ -1,0 +1,10 @@
+@keyframes bg-slide {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-animate-slide {
+  animation: bg-slide 30s ease-in-out infinite;
+  background-size: 200% auto;
+}

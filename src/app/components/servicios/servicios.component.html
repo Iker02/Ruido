@@ -71,8 +71,10 @@
   <section class="bg-black text-white text-center py-20 px-6">
     <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Listo para crear algo increíble?</h2>
     <p class="text-lg font-light mb-6">Hablemos y hagamos que tu marca suene, se vea y se sienta única.</p>
-    <a href="/contacto" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-6 rounded-xl transition">
-      Contáctanos
-    </a>
+    <a class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-6 rounded-xl transition"
+                  [routerLink]="['/']"
+                  [fragment]="'formulario'">
+          Contáctanos
+        </a>
   </section>
 </div>
