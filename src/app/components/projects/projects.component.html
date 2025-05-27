@@ -33,12 +33,14 @@
 
       <!-- Imagen + flechas -->
       <div class="md:col-span-8 relative">
-        <!-- Imagen -->
+        <!-- Imagen con fade-in -->
         <div class="overflow-hidden rounded-xl shadow-lg">
           <img
+            [@fadeInImage]
+            loading="eager"
             [src]="projects[currentIndex].image"
             alt="Project Image"
-            class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
+            class="w-full h-auto object-cover"
           />
         </div>
 
