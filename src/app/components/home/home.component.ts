@@ -16,14 +16,14 @@ import emailjs from 'emailjs-com';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements AfterViewInit{
+export class HomeComponent {
   @ViewChild('carousel') carouselRef!: ElementRef;
   mainImage: string = '../../../assets/article-cinematografia.jpg';
   isMouseDown = false;
   contactoForm!: FormGroup;
   selectedCard: any = null;
   isBrowser = false;
-  activeIndex = 1;
+  activeIndex = 0;
   intervalId?: any;
 
   constructor(
@@ -42,12 +42,6 @@ export class HomeComponent implements AfterViewInit{
 
     if (this.isBrowser) {
       this.startAutoHover();
-    }
-  }
-
-  ngAfterViewInit(): void {
-    if (this.isBrowser) {
-      this.carouselRef.nativeElement.scrollLeft = 0;
     }
   }
 
@@ -108,26 +102,6 @@ export class HomeComponent implements AfterViewInit{
     } else {
       alert('Por favor, completa todos los campos');
     }
-  }
-
-  moveToCenter(index: number, carousel: HTMLElement) {
-    // Calculamos el desplazamiento que hace falta para centrar la carta
-    const cardWidth = carousel.children[index].clientWidth; // Ancho de la carta
-    const carouselWidth = carousel.clientWidth; // Ancho del contenedor del carrusel
-    const offset = (carouselWidth - cardWidth) / 2; // Desplazamiento necesario para centrar la carta
-
-    // Calcular la posición de desplazamiento dentro del carrusel
-    const newScrollPosition =
-      (carousel.children[index] as HTMLElement).offsetLeft - offset;
-
-    // Mover el carrusel a la posición calculada
-    carousel.scrollTo({
-      left: newScrollPosition,
-      behavior: 'smooth',
-    });
-
-    // Actualizar la carta seleccionada para efectos visuales
-    this.selectedCard = this.cards[index];
   }
 
   getYear(): number {
