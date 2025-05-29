@@ -170,6 +170,7 @@
           <!-- Botón de texto -->
           <button
             class="bg-black text-white px-6 py-2 rounded-2xl flex items-center gap-2 hover:bg-gray-800 transition w-[85%] max-w-[500px]"
+            [routerLink]="'/projects'"
           >
             {{ "button_discover_more" | translate }}
           </button>
@@ -177,6 +178,7 @@
           <!-- Botón de flecha -->
           <button
             class="bg-black text-white px-4 py-2 rounded-2xl flex items-center hover:bg-gray-800 transition"
+            [routerLink]="'/projects'"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -230,8 +232,9 @@
 
       <button
         class="absolute bottom-4 right-4 bg-[#2b2a2a] text-white font-medium text-[17px] px-4 py-[0.35em] pl-5 h-[2.8em] rounded-[0.9em] flex items-center overflow-hidden cursor-pointer shadow-[inset_0_0_1.6em_-0.6em_#714da6] group"
+        [routerLink]="'/about-us'"
       >
-        <span class="mr-10">{{'BUTTON.THIS_IS_US' | translate}}</span>
+        <span class="mr-10">{{ "BUTTON.THIS_IS_US" | translate }}</span>
         <div
           class="absolute right-[0.3em] bg-white h-[2.2em] w-[2.2em] rounded-[0.7em] flex items-center justify-center transition-all duration-300 group-hover:w-[calc(100%-0.6em)] shadow-[0.1em_0.1em_0.6em_0.2em_#7b52b9] active:scale-95"
         >
@@ -278,27 +281,27 @@
         class="w-full max-w-lg space-y-6 relative z-10 bg-white p-8 rounded-xl shadow-lg"
       >
         <h2 class="text-3xl font-semibold text-center text-gray-800 mb-6">
-          {{'CONTACT.TITLE' | translate}}
+          {{ "CONTACT.TITLE" | translate }}
         </h2>
 
         <input
           type="text"
-          placeholder="{{'CONTACT.NAME_PLACEHOLDER' | translate}}"
+          placeholder="{{ 'CONTACT.NAME_PLACEHOLDER' | translate }}"
           class="w-full px-6 py-3 rounded-xl border-2 border-gray-300 focus:ring-2 focus:ring-[#d4c2a5] transition duration-300"
         />
         <input
           type="tel"
-          placeholder="{{'CONTACT.PHONE_PLACEHOLDER' | translate}}"
+          placeholder="{{ 'CONTACT.PHONE_PLACEHOLDER' | translate }}"
           class="w-full px-6 py-3 rounded-xl border-2 border-gray-300 focus:ring-2 focus:ring-[#d4c2a5] transition duration-300"
         />
         <input
           type="email"
-          placeholder="{{'CONTACT.EMAIL_PLACEHOLDER' | translate}}"
+          placeholder="{{ 'CONTACT.EMAIL_PLACEHOLDER' | translate }}"
           class="w-full px-6 py-3 rounded-xl border-2 border-gray-300 focus:ring-2 focus:ring-[#d4c2a5] transition duration-300"
         />
         <textarea
           rows="4"
-          placeholder="{{'CONTACT.MESSAGE_PLACEHOLDER' | translate}}"
+          placeholder="{{ 'CONTACT.MESSAGE_PLACEHOLDER' | translate }}"
           class="w-full px-6 py-3 rounded-3xl border-2 border-gray-300 focus:ring-2 focus:ring-[#d4c2a5] transition duration-300 resize-none"
         ></textarea>
 
@@ -307,7 +310,7 @@
             type="submit"
             class="bg-[#d4c2a5] border-[3px] border-black shadow-[4px_4px_0_#000] px-8 py-3 rounded-full text-lg font-semibold text-white transition duration-300 ease-in-out transform hover:scale-105"
           >
-            {{'CONTACT.SEND_BUTTON' | translate}}
+            {{ "CONTACT.SEND_BUTTON" | translate }}
           </button>
         </div>
       </form>
@@ -402,9 +405,11 @@
 
         <!-- Dirección -->
         <div class="text-center md:text-left">
-          <p class="text-lg font-bold tracking-wide">{{'footer.visit_us' | translate}}</p>
+          <p class="text-lg font-bold tracking-wide">
+            {{ "footer.visit_us" | translate }}
+          </p>
           <p class="text-sm text-gray-700">
-            {{'footer.address' | translate}}
+            {{ "footer.address" | translate }}
           </p>
         </div>
 
@@ -412,7 +417,7 @@
         <div class="text-center md:text-right">
           <p class="text-sm text-gray-700 font-serif">
             &copy; {{ getYear() }} <span class="font-semibold">Ruido</span>.
-            {{'footer.copyright' | translate}}
+            {{ "footer.copyright" | translate }}
           </p>
         </div>
       </div>
