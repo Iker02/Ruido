@@ -94,6 +94,7 @@
             </a>
             <div class="relative inline-block text-left">
               <button
+                id="language-toggle-btn"
                 class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
                 type="button"
                 (click)="toggleDropdown()"
@@ -162,23 +163,13 @@
       <div class="flex items-center gap-9">
         <div class="relative inline-block text-left">
           <button
-            class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-gray-50 text-sm font-medium text-gray-700 hover:bg-gray-50"
+            id="language-toggle-btn"
+            class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-amber-50 bg-opacity-50 text-sm font-medium text-gray-700"
             type="button"
             (click)="toggleDropdown()"
             dropdownOpen="true"
           >
             🌐
-            <svg
-              class="-mr-1 ml-2 h-5 w-5"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0L5.25 8.27a.75.75 0 01-.02-1.06z"
-                clip-rule="evenodd"
-              />
-            </svg>
           </button>
 
           <div
