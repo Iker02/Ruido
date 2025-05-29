@@ -1,4 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core';
 import {
   Component,
   HostListener,
@@ -23,6 +24,7 @@ export class AppComponent {
   mostrarPopup = false;
   mostrarPopupW = false;
   ocultarPopup = true;
+  dropdownOpen = false;
   mensaje = 'Hola, me gustaría recibir información sobre vuestra empresa :)';
   numeroWhatsapp = '34644356186'; // Reemplazar con el número de fede
 
@@ -30,7 +32,8 @@ export class AppComponent {
     @Inject(PLATFORM_ID) private platformId: Object,
     private spinner: NgxSpinnerService,
     private ngZone: NgZone,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private translate: TranslateService
   ) {}
 
   ngOnInit(): void {
@@ -42,6 +45,11 @@ export class AppComponent {
           this.spinner.hide();
         }, 1000);
       });
+    }
+
+    if (typeof window !== 'undefined') {
+      const lang = localStorage.getItem('lang') || 'es';
+      this.translate.use(lang);
     }
   }
 
@@ -80,6 +88,7 @@ export class AppComponent {
       const clickedInsideMenu = target.closest('#sidebar-menu');
       if (!clickedInsideMenu) {
         this.isMenuOpen = false;
+        this.dropdownOpen = false; 
       }
     }
   }
@@ -104,5 +113,19 @@ export class AppComponent {
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+
+  switchLanguage(lang: string) {
+    localStorage.setItem('lang', lang);
+    this.translate.use(lang);
+    this.dropdownOpen = false;
+  }
+
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+
+    toggleDropdownOpen() {
+    this.dropdownOpen = this.dropdownOpen = true;
   }
 }

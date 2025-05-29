@@ -50,16 +50,14 @@
           </h2>
 
           <!-- Navegación -->
-          <nav
-            class="flex flex-col space-y-4 text-base font-serif"
-            (click)="toggleMenu()"
-          >
+          <nav class="flex flex-col space-y-4 text-base font-serif">
             <a
               [routerLink]="'/projects'"
               [ngClass]="{
                 'text-black': isScrolled,
                 'text-gray-800': !isScrolled
               }"
+              (click)="toggleMenu()"
             >
               Proyectos
             </a>
@@ -69,6 +67,7 @@
                 'text-black': isScrolled,
                 'text-gray-800': !isScrolled
               }"
+              (click)="toggleMenu()"
             >
               Sobre Nosotros
             </a>
@@ -78,6 +77,7 @@
                 'text-black': isScrolled,
                 'text-gray-800': !isScrolled
               }"
+              (click)="toggleMenu()"
             >
               Servicios
             </a>
@@ -88,9 +88,63 @@
                 'text-black': isScrolled,
                 'text-gray-800': !isScrolled
               }"
+              (click)="toggleMenu()"
             >
               Contacto
             </a>
+            <div class="relative inline-block text-left">
+              <button
+                class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+                type="button"
+                (click)="toggleDropdown()"
+                dropdownOpen="true"
+              >
+                🌐 Language
+                <svg
+                  class="-mr-1 ml-2 h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0L5.25 8.27a.75.75 0 01-.02-1.06z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+
+              <div
+                *ngIf="dropdownOpen"
+                class="origin-top-right absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+              >
+                <div class="py-1">
+                  <button
+                    (click)="switchLanguage('en')"
+                    (click)="toggleMenu()"
+                    class="w-full flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img
+                      src="../assets/usa-flag.png"
+                      alt="USA"
+                      class="w-5 h-5 mr-2"
+                    />
+                    English
+                  </button>
+                  <button
+                    (click)="switchLanguage('es')"
+                    (click)="toggleMenu()"
+                    class="w-full flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img
+                      src="../assets/spain-flag-png.webp"
+                      alt="Spain"
+                      class="w-5 h-5 mr-2"
+                    />
+                    Español
+                  </button>
+                </div>
+              </div>
+            </div>
           </nav>
         </div>
 
@@ -106,6 +160,59 @@
     <!-- Navegación y avatar (solo en pantallas xl o más grandes) -->
     <div class="hidden xl:flex flex-1 justify-end gap-8">
       <div class="flex items-center gap-9">
+        <div class="relative inline-block text-left">
+          <button
+            class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-gray-50 text-sm font-medium text-gray-700 hover:bg-gray-50"
+            type="button"
+            (click)="toggleDropdown()"
+            dropdownOpen="true"
+          >
+            🌐
+            <svg
+              class="-mr-1 ml-2 h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0L5.25 8.27a.75.75 0 01-.02-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+
+          <div
+            *ngIf="dropdownOpen"
+            class="origin-top-right absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+          >
+            <div class="py-1">
+              <button
+                (click)="switchLanguage('en')"
+                (click)="toggleMenu()"
+                class="w-full flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >
+                <img
+                  src="../assets/usa-flag.png"
+                  alt="USA"
+                  class="w-5 h-5 mr-2"
+                />
+                English
+              </button>
+              <button
+                (click)="switchLanguage('es')"
+                (click)="toggleMenu()"
+                class="w-full flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >
+                <img
+                  src="../assets/spain-flag-png.webp"
+                  alt="Spain"
+                  class="w-5 h-5 mr-2"
+                />
+                Español
+              </button>
+            </div>
+          </div>
+        </div>
         <a
           class="text-sm font-serif leading-normal transition-colors duration-300 group-hover:text-black"
           [ngClass]="{ 'text-black': isScrolled, 'text-white': !isScrolled }"

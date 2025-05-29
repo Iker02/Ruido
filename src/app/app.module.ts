@@ -20,9 +20,23 @@ import { TeamComponent } from './components/team/team.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, '../assets/i18n/', '.json');
+}
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ErrorComponent, ProjectsComponent, AboutUsComponent, ServiciosComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ErrorComponent,
+    ProjectsComponent,
+    AboutUsComponent,
+    ServiciosComponent,
+  ],
   imports: [
     FormsModule,
     NgxMarqueeComponent,
@@ -35,6 +49,15 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
     AboutUsCardComponent,
     MapComponent,
     TeamComponent,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'es',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [provideClientHydration(withEventReplay())],
   bootstrap: [AppComponent],

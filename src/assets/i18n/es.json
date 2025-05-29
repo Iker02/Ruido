@@ -1,0 +1,28 @@
+{
+  "welcome_message": "Bienvenido a Ruido — Descubre, aprende y desarrolla tus habilidades en programación sin límites.",
+  "main_title": "Convierte el ruido en historias",
+  "button_watch_now": "Ver ahora",
+  "signature_projects_title": "Nuestros Proyectos Emblemáticos",
+  "signature_projects_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "button_discover_more": "Descubrir más",
+  "ABOUT_US": {
+    "TITLE": "Sobre Nosotros",
+    "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  "CONTACT": {
+    "TITLE": "Conecta con nosotros",
+    "NAME_PLACEHOLDER": "Nombre",
+    "PHONE_PLACEHOLDER": "Teléfono",
+    "EMAIL_PLACEHOLDER": "Correo",
+    "MESSAGE_PLACEHOLDER": "Mensaje",
+    "SEND_BUTTON": "Enviar"
+  },
+  "BUTTON": {
+    "THIS_IS_US": "Estos somos"
+  },
+  "footer": {
+    "visit_us": "Visítanos",
+    "address": "Calle Ficticia 123 Ciudad, País",
+    "copyright": "Todos los derechos reservados."
+  }
+}

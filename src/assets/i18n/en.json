@@ -1,0 +1,29 @@
+{
+  "welcome_message": "Welcome to Ruido — Discover, learn, and develop your programming skills without limits.",
+  "main_title": "Turn noise into stories",
+  "button_watch_now": "Watch now",
+  "signature_projects_title": "Our Signature Projects",
+  "signature_projects_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "button_discover_more": "Discover More",
+
+  "ABOUT_US": {
+    "TITLE": "About Us",
+    "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  "CONTACT": {
+    "TITLE": "Connect with us",
+    "NAME_PLACEHOLDER": "Name",
+    "PHONE_PLACEHOLDER": "Phone",
+    "EMAIL_PLACEHOLDER": "Email",
+    "MESSAGE_PLACEHOLDER": "Message",
+    "SEND_BUTTON": "Send"
+  },
+  "BUTTON": {
+    "THIS_IS_US": "This is us"
+  },
+  "footer": {
+    "visit_us": "Visit us",
+    "address": "123 Fictional Street City, Country",
+    "copyright": "All rights reserved."
+  }
+}
