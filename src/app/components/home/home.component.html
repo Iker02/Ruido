@@ -37,22 +37,30 @@
   </div>
 
   <div
-    class="contenidoDeCartas flex overflow-x-auto no-scrollbar whitespace-nowrap snap-x snap-start"
+    class="contenidoDeCartas flex overflow-x-auto no-scrollbar whitespace-nowrap snap-x snap-start h-[400px]"
     #carousel
   >
     <div
-      class="card flex-shrink-0 snap-start w-[63.33%] sm:w-[63.33%] md:w-[45%] xl:w-[25%] z-20"
+      class="group card relative flex-shrink-0 snap-start w-[63.33%] sm:w-[63.33%] md:w-[45%] xl:w-[25%] z-20 h-[400px] overflow-hidden shadow-lg"
       *ngFor="let card of cards; let i = index"
       [class.active]="i === activeIndex"
     >
-      <img [src]="card.image" class="w-full object-cover h-[400px]" />
-      <div class="card__content p-4">
-        <p class="card__title text-xl font-semibold">{{ card.title }}</p>
-        <p class="card__description text-sm text-gray-600">
+      <!-- Imagen de fondo -->
+      <div
+        class="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:opacity-0"
+        [ngStyle]="{ 'background-image': 'url(' + card.image + ')' }"
+      ></div>
+
+      <!-- Capa negra con texto -->
+      <div
+        class="absolute inset-0 bg-black text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex flex-col justify-between"
+      >
+        <div class="text-xl font-semibold">{{ card.title }}</div>
+        <p class="text-sm mt-4 flex-grow whitespace-normal">
           {{ card.description }}
         </p>
         <button
-          class="fixed bottom-4 right-4 bg-[#d4c2a5] border-[3px] border-black shadow-[4px_4px_0_#000] transition-transform duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0_#000] px-4 py-2 rounded-full text-base font-semibold self-start"
+          class="bg-white text-black rounded-full px-4 py-2 font-semibold self-start border-[3px] border-black shadow-[4px_4px_0_#000] transition-transform duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0_#000]"
         >
           {{ "button_watch_now" | translate }}
         </button>
@@ -268,16 +276,14 @@
 
     <!-- Formulario -->
     <div
-      class="md:w-1/2 w-full flex items-center justify-center p-6 relative z-20"
+      class="md:w-1/2 w-full flex items-center justify-center relative z-20"
       id="formulario"
     >
       <!-- Fondo con opacidad -->
       <div class="absolute inset-0 bg-opacity-40 bg-gray-100 z-0"></div>
 
       <!-- Contenido del formulario -->
-      <form
-        class="w-full max-w-lg space-y-6 relative z-10 bg-white p-8 rounded-xl shadow-lg"
-      >
+      <form class="w-full space-y-6 relative z-10 bg-white p-8 shadow-lg">
         <h2 class="text-3xl font-semibold text-center text-gray-800 mb-6">
           {{ "CONTACT.TITLE" | translate }}
         </h2>
