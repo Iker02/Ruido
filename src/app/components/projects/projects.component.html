@@ -3,7 +3,7 @@
 >
   <!-- Fondo con desenfoque dinámico -->
   <div
-    class="absolute inset-0 bg-cover blur-xl brightness-75 scale-110 bg-animate-slide transition-all duration-500"
+    class="absolute inset-0 bg-cover blur-xl brightness-75 scale-110 bg-animate-slide transition-all duration-500 z-0"
     [ngStyle]="{
       'background-image': 'url(' + projects[currentIndex].image + ')'
     }"
@@ -11,34 +11,34 @@
 
   <!-- Contenido principal -->
   <div
-    class="relative z-10 max-w-6xl w-full mx-6 sm:mx-12 px-6 py-10 sm:py-16 bg-white bg-opacity-30 backdrop-blur-md rounded-3xl shadow-2xl"
+    class="relative z-10 max-w-6xl w-full mx-6 sm:mx-12 px-6 py-10 sm:py-16 bg-white bg-opacity-50 backdrop-blur-lg rounded-3xl shadow-[8px_8px_0_#000] border-[3px] border-black"
   >
     <!-- Título -->
-    <div class="mb-10">
-      <h2 class="text-2xl sm:text-3xl font-bold text-black mb-2 tracking-tight">
+    <div class="mb-10 text-black">
+      <h2 class="text-3xl md:text-4xl font-bold leading-tight tracking-tight mb-3 drop-shadow-md">
         {{ projects[currentIndex].title }}
       </h2>
-      <p class="text-sm sm:text-base text-blue-50 max-w-3xl">
+      <p class="text-gray-800 text-sm md:text-base font-medium max-w-3xl">
         {{ projects[currentIndex].description }}
       </p>
     </div>
 
     <!-- Contenido dividido -->
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center relative">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
       <!-- Lado izquierdo -->
-      <div class="md:col-span-2 text-black text-sm font-medium">
+      <div class="md:col-span-2 text-black text-sm font-semibold">
         <div class="mb-2">({{ currentIndex + 1 | number : "2.0" }})</div>
-        <div class="hidden sm:block">(Projects)</div>
+        <div class="hidden sm:block text-black/80">(Projects)</div>
       </div>
 
       <!-- Imagen + flechas -->
       <div class="md:col-span-8 relative">
-        <!-- Imagen con fade-in -->
-        <div class="overflow-hidden rounded-xl shadow-lg">
+        <!-- Imagen -->
+        <div class="overflow-hidden rounded-2xl shadow-[6px_6px_0_#000] border-[3px] border-black">
           <img
             [@fadeInImage]
-            loading="eager"
             [src]="projects[currentIndex].image"
+            loading="eager"
             alt="Project Image"
             class="w-full h-auto object-cover min-h-[250px]"
           />
@@ -46,20 +46,20 @@
 
         <!-- Botón de reproducción -->
         <button
-          class="absolute bottom-4 left-4 bg-black/70 text-white text-xs sm:text-sm px-4 py-1.5 rounded-full hover:bg-black transition"
+          class="absolute bottom-4 left-4 bg-black text-white rounded-full px-4 py-2 text-sm font-semibold border-[2px] border-white shadow-[4px_4px_0_#fff] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0_#fff] transition-transform"
         >
-          ▶ PLAY VIDEO
+          ▶ {{ 'button_watch_now' | translate }}
         </button>
 
         <!-- Flechas -->
         <button
-          class="absolute top-1/2 -left-6 transform -translate-y-1/2 bg-black/70 text-white rounded-full p-2 hover:bg-black transition"
+          class="absolute top-1/2 -left-6 transform -translate-y-1/2 bg-black text-white rounded-full p-3 border-[2px] border-white shadow-[3px_3px_0_#fff] hover:bg-gray-900 transition"
           (click)="previousSlide()"
         >
           &#10094;
         </button>
         <button
-          class="absolute top-1/2 -right-6 transform -translate-y-1/2 bg-black/70 text-white rounded-full p-2 hover:bg-black transition"
+          class="absolute top-1/2 -right-6 transform -translate-y-1/2 bg-black text-white rounded-full p-3 border-[2px] border-white shadow-[3px_3px_0_#fff] hover:bg-gray-900 transition"
           (click)="nextSlide()"
         >
           &#10095;
@@ -67,9 +67,7 @@
       </div>
 
       <!-- Lado derecho -->
-      <div
-        class="md:col-span-2 text-right text-sm text-black flex flex-col justify-between h-full"
-      >
+      <div class="md:col-span-2 text-right text-sm text-black flex flex-col justify-between h-full font-medium">
         <span class="mb-2">scroll ↓</span>
         <span class="hidden sm:block">({{ projects[currentIndex].year }})</span>
       </div>
