@@ -2,8 +2,6 @@
   overflow-y: hidden;
 }
 
-
-
 .clip-hexagon {
   clip-path: polygon(25% 0%, 85% 0%, 100% 100%, 25% 100%, 0% 80%);
 }
@@ -38,31 +36,22 @@
   );
 }
 
-.marquee-container {
-  width: 100%; /* O un ancho fijo */
-  overflow: hidden; /* Escondemos el contenido fuera del contenedor */
+::ng-deep .om-marquee-content {
+  padding: 0 !important;
+  gap: 0 !important;
 }
 
-.marquee-content {
-  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-  display: inline-block; /* Asegura que el contenido no ocupe todo el ancho */
-}
 
-.om-marquee[_ngcontent-ng-c733378029] {
-  --om-marquee-animation-duration: 20s;
-  --om-marquee-gap: 1rem;
-  --om-marquee-reverse: ;
-  --om-marquee-pause: paused;
-  width: 100%;
-  height: 10%;
+#OmMarqueeContent{
+  padding: 0px;
 }
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 .no-scrollbar {
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .contenidoDeCartas {
   overflow-y: hidden;
@@ -113,7 +102,6 @@
   transition: transform 0.3s ease;
 }
 
-
 .card__title {
   margin: 0;
   font-size: 24px;
@@ -132,8 +120,7 @@
   transform: rotateY(180deg);
 }
 
-
-/* From Uiverse.io by aadium */ 
+/* From Uiverse.io by aadium */
 .social-buttons {
   display: flex;
   justify-content: center;
@@ -187,7 +174,6 @@
   fill: #000000;
 }
 
-
 .facebook {
   background-color: #3b5998;
 }
@@ -199,7 +185,6 @@
 .facebook:hover svg {
   fill: #3b5998;
 }
-
 
 .linkedin {
   background-color: #0077b5;
@@ -224,4 +209,3 @@
 .instagram:hover svg {
   fill: #c13584;
 }
-
