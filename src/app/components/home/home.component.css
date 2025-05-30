@@ -52,6 +52,8 @@
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .contenidoDeCartas {
   overflow-y: hidden;
